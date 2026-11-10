@@ -1,0 +1,70 @@
+:root, [data-theme="dark"] {
+  --bg: #07080B;
+  --bg-2: #0E1015;
+  --ink: #F2F0EA;
+  --ink-dim: #8B8E98;
+  --line: rgba(242, 240, 234, 0.14);
+  --blue: #3E7BFF;
+  --blue-hover: #5A90FF;
+  --red: #E5243B;
+  --red-hover: #F23D52;
+  --card-bg: rgba(14, 16, 21, 0.75);
+}
+
+[data-theme="light"] {
+  --bg: #F4F2EE;
+  --bg-2: #E9E6DF;
+  --ink: #0B0C10;
+  --ink-dim: #5A5D68;
+  --line: rgba(11, 12, 16, 0.16);
+  --blue: #2358DB;
+  --blue-hover: #1943B2;
+  --red: #D71830;
+  --red-hover: #B51126;
+  --card-bg: rgba(233, 230, 223, 0.85);
+}
+
+/* Base custom utility styles */
+.clip-notch-tl {
+  clip-path: polygon(18px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 18px);
+}
+
+.clip-notch-br {
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0% 100%);
+}
+
+.clip-slash {
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.clip-slash-reverse {
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Halftone dot pattern */
+.bg-halftone {
+  background-image: radial-gradient(var(--line) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.bg-halftone-dense {
+  background-image: radial-gradient(var(--line) 1.5px, transparent 1.5px);
+  background-size: 8px 8px;
+}
+
+/* Blueprint grid */
+.bg-blueprint {
+  background-size: 24px 24px;
+  background-image:
+    linear-gradient(to right, var(--line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+}
+
+/* Speedlines radial burst */
+.speed-lines {
+  background: repeating-conic-gradient(
+    from 0deg,
+    transparent 0deg 8deg,
+    var(--line) 8deg 9deg
+  );
+}

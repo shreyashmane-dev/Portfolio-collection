@@ -1,0 +1,127 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+@theme inline {
+  --font-display: var(--font-display), sans-serif;
+  --font-sans: var(--font-text), sans-serif;
+  --font-mono: var(--font-mono), monospace;
+}
+
+@layer base {
+  * {
+    border-color: var(--line);
+    box-sizing: border-box;
+  }
+
+  html {
+    background-color: var(--bg);
+    color: var(--ink);
+    scroll-behavior: auto;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+    font-family: var(--font-sans);
+  }
+
+  /* Focus ring requirements: 2px blue, offset 3px */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 3px;
+  }
+
+  /* Selection style */
+  ::selection {
+    background-color: var(--red);
+    color: #ffffff;
+  }
+}
+
+/* Global textures: Film Grain, Scanlines */
+.film-grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 998;
+  opacity: 0.025;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .film-grain, .scanlines {
+    display: none;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Misregistered chromatic text offset utility */
+.chromatic-text {
+  position: relative;
+  display: inline-block;
+}
+.chromatic-text::before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  top: 0;
+  color: var(--red);
+  clip-path: polygon(0 0, 100% 0, 100% 48%, 0 48%);
+  opacity: 0.75;
+  pointer-events: none;
+}
+.chromatic-text::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  top: 0;
+  color: var(--blue);
+  clip-path: polygon(0 52%, 100% 52%, 100% 100%, 0 100%);
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+/* Manga panel border */
+.manga-panel {
+  border: 2px solid var(--ink);
+  background-color: var(--card-bg);
+  position: relative;
+}
+
+.manga-panel-notch {
+  border: 1px solid var(--line);
+  background-color: var(--card-bg);
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+}
