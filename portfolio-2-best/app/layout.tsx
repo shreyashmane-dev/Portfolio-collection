@@ -35,6 +35,11 @@ export const metadata: Metadata = {
     description: "Search engines, AI tools, hardware systems. 43 projects, one builder.",
     images: ["/og.png"],
   },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
   robots: { index: true, follow: true },
 };
 

@@ -35,31 +35,23 @@ export function Preloader() {
       update();
     });
 
-    const modelReady = (async () => {
-      try {
-        const res = await fetch("/models/swordsman.glb");
-        if (!res.ok || !res.body) {
-          state.model = 1;
-          update();
+    const modelReady = new Promise<void>((resolve) => {
+      let step = 0;
+      const interval = setInterval(() => {
+        if (cancelled) {
+          clearInterval(interval);
+          resolve();
           return;
         }
-        const total = Number(res.headers.get("content-length") ?? 0);
-        const reader = res.body.getReader();
-        let loaded = 0;
-        for (;;) {
-          const { done, value } = await reader.read();
-          if (done) break;
-          loaded += value.byteLength;
-          state.model = total ? Math.min(loaded / total, 1) : 0.5;
-          update();
+        step += 0.05;
+        state.model = Math.min(step, 1);
+        update();
+        if (step >= 1) {
+          clearInterval(interval);
+          resolve();
         }
-        state.model = 1;
-        update();
-      } catch {
-        state.model = 1;
-        update();
-      }
-    })();
+      }, 50);
+    });
 
     Promise.all([fontsReady, modelReady]).then(() => {
       if (cancelled) return;

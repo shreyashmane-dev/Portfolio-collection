@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useEffect, type MutableRefObject } from "react";
+import { useMemo, useRef, useEffect, Suspense, type MutableRefObject } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useGLTF, useAnimations, Trail, MeshReflectorMaterial } from "@react-three/drei";
 import { EffectComposer, Bloom, Vignette, ChromaticAberration } from "@react-three/postprocessing";
@@ -350,7 +350,9 @@ export default function SwordsmanScene({ progress, mobile }: { progress: Progres
       <color attach="background" args={["#05060a"]} />
       <fogExp2 attach="fog" args={["#05060a", 0.038]} />
       <Lights progress={progress} />
-      <Swordsman progress={progress} tip={tip} />
+      <Suspense fallback={null}>
+        <Swordsman progress={progress} tip={tip} />
+      </Suspense>
       <Orb progress={progress} tip={tip} color={RED} side={-1} />
       <Orb progress={progress} tip={tip} color={BLUE} side={1} />
       <Shockwave progress={progress} />
