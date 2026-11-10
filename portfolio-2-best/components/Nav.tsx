@@ -109,7 +109,7 @@ export function Nav() {
             <a
               href={site.github}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer me"
               aria-label="GitHub profile"
               className="hidden p-2 text-muted transition-colors hover:text-ink sm:block"
             >

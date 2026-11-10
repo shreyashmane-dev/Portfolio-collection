@@ -10,10 +10,10 @@ import { EASE } from "@/lib/motion";
 gsap.registerPlugin(ScrollTrigger);
 
 const facts = [
-  { icon: GraduationCap, k: "Degree", v: "B.Tech — Computer Science & Engineering" },
+  { icon: GraduationCap, k: "Degree", v: `${site.academics.degree} — ${site.academics.branch}` },
   { icon: Building2, k: "College", v: site.college },
   { icon: Award, k: "University", v: site.university },
-  { icon: MapPin, k: "Base", v: site.location },
+  { icon: MapPin, k: "Location", v: site.location },
 ];
 
 export function About() {
@@ -52,7 +52,7 @@ export function About() {
   }, []);
 
   return (
-    <section ref={rootRef} id="about" className="vh-full relative overflow-hidden bg-surface cut-top" aria-label="About">
+    <section ref={rootRef} id="about" className="vh-full relative overflow-hidden bg-surface cut-top" aria-label="About Shreyash Mane">
       <div className="halftone pointer-events-none absolute right-0 top-0 h-1/2 w-1/3 opacity-40" aria-hidden="true" />
       <div className="mx-auto grid h-full max-w-[110rem] grid-cols-1 content-center gap-10 px-5 py-24 md:grid-cols-[1fr_1.6fr] md:gap-16 md:px-10">
         <div className="relative">
@@ -90,7 +90,17 @@ export function About() {
             </span>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          {/* Factual biographical narrative for indexing & crawlers */}
+          <div className="mt-8 max-w-2xl text-sm leading-relaxed text-muted md:text-base space-y-3">
+            <p>
+              Shreyash Mane is an undergraduate Computer Science and Engineering student at {site.college}, affiliated with {site.university} in Maharashtra, India. His engineering work spans 43 repositories focusing on information retrieval, applied artificial intelligence, full-stack web platforms, and embedded microcontroller hardware.
+            </p>
+            <p>
+              Rather than theoretical exercises, every initiative centers on working code: from architecting independent search engine pipelines and computer-vision diagnostic tools to programming ESP32 and Arduino circuits with RFID access and ultrasonic telemetry.
+            </p>
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {facts.map(({ icon: Icon, k, v }, i) => (
               <div
                 key={k}
@@ -105,7 +115,7 @@ export function About() {
             ))}
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-2">
+          <div className="mt-8 flex flex-wrap gap-2">
             {site.interests.map((interest) => (
               <span key={interest} className="interest-chip border border-line px-3 py-1.5 font-mono text-xs text-muted">
                 {interest}

@@ -367,7 +367,7 @@ export const projects: Project[] = [
     repo: gh("aivora-web"),
     status: "Experimental",
     labels: ["Full-Stack Development"],
-    docNeeded: false,
+    docNeeded: true,
     featured: false,
   },
   {
@@ -419,7 +419,7 @@ export const projects: Project[] = [
     repo: gh("Memora"),
     status: "Experimental",
     labels: ["Full-Stack Development"],
-    docNeeded: false,
+    docNeeded: true,
     featured: false,
   },
   {
@@ -510,7 +510,7 @@ export const projects: Project[] = [
     repo: gh("Recordly"),
     status: "Experimental",
     labels: ["Developer Tools"],
-    docNeeded: false,
+    docNeeded: true,
     featured: false,
     thirdParty: true,
     note: "Copy of the open-source Recordly app (recordly.dev, AGPL-3.0). Not presented as original work.",

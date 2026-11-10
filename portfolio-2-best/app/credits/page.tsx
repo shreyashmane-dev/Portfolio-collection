@@ -2,9 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://shreyash-portfolllio.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Credits",
-  description: "Asset, model, font and library credits for the Shreyash Mane portfolio.",
+  title: "Credits & Colophon",
+  description: "Asset, model, font and library credits for the Shreyash Mane anime-inspired developer portfolio.",
+  alternates: {
+    canonical: `${siteUrl}/credits`,
+  },
 };
 
 const models = [

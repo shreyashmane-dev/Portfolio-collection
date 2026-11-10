@@ -65,14 +65,14 @@ export function Career() {
         </div>
 
         <div className="acad-grid grid content-start gap-5">
-          <p className="label text-red">Academics</p>
+          <p className="label text-red">07 / Education</p>
           <div className="acad-block panel panel-slash-sm corner-ticks p-6">
-            <p className="font-display text-3xl uppercase">{site.academics.degree} — CSE</p>
+            <h3 className="font-display text-3xl uppercase">{site.academics.degree} — CSE</h3>
             <p className="mt-2 text-sm text-muted">{site.academics.institution}</p>
             <p className="text-sm text-muted">{site.academics.university}</p>
           </div>
           <div className="acad-block panel p-6 md:ml-10">
-            <p className="label mb-3">Academic focus</p>
+            <h4 className="label mb-3">Academic focus</h4>
             <div className="flex flex-wrap gap-2">
               {site.academics.focus.map((f) => (
                 <span key={f} className="border border-line px-2.5 py-1 font-mono text-xs text-muted">
@@ -82,7 +82,7 @@ export function Career() {
             </div>
           </div>
           <div className="acad-block panel p-6 md:ml-20">
-            <p className="label mb-3">Learning next</p>
+            <h4 className="label mb-3">Learning next</h4>
             <div className="flex flex-wrap gap-2">
               {site.academics.learning.map((l) => (
                 <span key={l} className="border border-blue/40 px-2.5 py-1 font-mono text-xs text-blue">

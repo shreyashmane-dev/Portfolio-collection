@@ -52,7 +52,7 @@ export function Hero() {
         setSceneReady(true);
       };
       window.addEventListener(PRELOADER_DONE, start, { once: true });
-      const fallback = window.setTimeout(start, 6000);
+      const fallback = window.setTimeout(start, 4000);
       return () => {
         window.removeEventListener(PRELOADER_DONE, start);
         window.clearTimeout(fallback);
@@ -111,7 +111,11 @@ export function Hero() {
           {site.title}
         </p>
 
-        <h1 className="hero-name font-display leading-[0.86]">
+        <h1
+          className="hero-name font-display leading-[0.86]"
+          aria-label="Shreyash Mane — Computer Science and Engineering Student, AI and Full-Stack Developer"
+        >
+          <span className="sr-only">Shreyash Mane — Computer Science and Engineering Student, AI and Full-Stack Developer</span>
           <span className="block overflow-hidden text-[clamp(4rem,15.5vw,15rem)]">
             <SplitChars text="SHREYASH" />
           </span>

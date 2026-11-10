@@ -118,7 +118,7 @@ export function Finale() {
 
         <div className="pointer-events-none absolute left-5 top-20 z-10 md:left-10">
           <p className="label text-[#9a9da8]">07 / Finale</p>
-          <p className="font-display mt-1 text-2xl uppercase text-[#F2F0EA]">The Swordsman</p>
+          <h2 className="font-display mt-1 text-2xl uppercase text-[#F2F0EA]">The Swordsman</h2>
         </div>
         <a
           href="#contact"

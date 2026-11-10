@@ -63,12 +63,24 @@ export function Contact() {
 
         <div className="contact-reveal mt-10 flex flex-wrap gap-4">
           <Magnetic>
-            <a href={site.github} target="_blank" rel="noopener noreferrer" className="btn-slash">
+            <a
+              href={site.github}
+              target="_blank"
+              rel="noopener noreferrer me"
+              aria-label="Shreyash Mane on GitHub"
+              className="btn-slash"
+            >
               <Github size={15} aria-hidden="true" /> GitHub
             </a>
           </Magnetic>
           <Magnetic>
-            <a href={site.linkedin} target="_blank" rel="noopener noreferrer" className="btn-slash btn-red">
+            <a
+              href={site.linkedin}
+              target="_blank"
+              rel="noopener noreferrer me"
+              aria-label="Shreyash Mane on LinkedIn"
+              className="btn-slash btn-red"
+            >
               <Linkedin size={15} aria-hidden="true" /> LinkedIn
             </a>
           </Magnetic>

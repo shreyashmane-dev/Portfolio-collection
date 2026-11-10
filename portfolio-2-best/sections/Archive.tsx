@@ -106,12 +106,14 @@ export function Archive() {
                 <span className="font-display w-10 shrink-0 text-2xl text-stroke">{pad2(p.rank)}</span>
                 <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                    <Link
-                      href={`/projects/${p.slug}`}
-                      className="font-display truncate text-lg uppercase tracking-wide transition-colors group-hover:text-blue md:text-xl"
-                    >
-                      {p.name}
-                    </Link>
+                    <h3 className="font-display truncate text-lg uppercase tracking-wide md:text-xl">
+                      <Link
+                        href={`/projects/${p.slug}`}
+                        className="transition-colors group-hover:text-blue"
+                      >
+                        {p.name}
+                      </Link>
+                    </h3>
                     {p.docNeeded && <DocBadge />}
                     {p.thirdParty && (
                       <span className="status-tag text-muted">Upstream Project</span>
@@ -130,14 +132,14 @@ export function Archive() {
                   href={p.repo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`${p.name} on GitHub`}
+                  aria-label={`${p.name} repository on GitHub`}
                   className="shrink-0 p-2 text-muted transition-colors hover:text-ink"
                 >
                   <Github size={16} />
                 </a>
                 <Link
                   href={`/projects/${p.slug}`}
-                  aria-label={`${p.name} details`}
+                  aria-label={`${p.name} project details`}
                   className="hidden shrink-0 p-2 text-muted transition-colors hover:text-blue sm:block"
                 >
                   <ChevronRight size={16} />
