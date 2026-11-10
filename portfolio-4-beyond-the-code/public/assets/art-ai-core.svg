@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="aiBg" cx="0.5" cy="0.45" r="0.8">
+      <stop offset="0" stop-color="#101830"/>
+      <stop offset="0.6" stop-color="#090C18"/>
+      <stop offset="1" stop-color="#05060B"/>
+    </radialGradient>
+    <radialGradient id="core" cx="0.42" cy="0.38" r="0.75">
+      <stop offset="0" stop-color="#EAF2FF"/>
+      <stop offset="0.3" stop-color="#7FA8FF"/>
+      <stop offset="0.65" stop-color="#2456C4"/>
+      <stop offset="1" stop-color="#0A1B4A"/>
+    </radialGradient>
+    <radialGradient id="coreHalo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#397BFF" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#397BFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="aiGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#aiBg)"/>
+  <g stroke="#1B2440" stroke-width="1" opacity="0.5">
+    <path d="M0 640 H1200 M0 680 H1200 M0 720 H1200 M0 760 H1200"/>
+    <path d="M200 800 L480 560 M400 800 L560 560 M600 800 L600 560 M800 800 L640 560 M1000 800 L720 560"/>
+  </g>
+  <circle cx="600" cy="360" r="300" fill="url(#coreHalo)"/>
+  <g fill="none" stroke-width="2">
+    <ellipse cx="600" cy="360" rx="280" ry="90" stroke="#397BFF" opacity="0.6" transform="rotate(-18 600 360)"/>
+    <ellipse cx="600" cy="360" rx="320" ry="120" stroke="#FFFFFF" opacity="0.14" transform="rotate(14 600 360)"/>
+    <ellipse cx="600" cy="360" rx="240" ry="240" stroke="#FF304F" opacity="0.4" stroke-dasharray="30 22"/>
+  </g>
+  <circle cx="600" cy="360" r="130" fill="url(#core)"/>
+  <circle cx="600" cy="360" r="130" fill="none" stroke="#9FC0FF" stroke-width="2" opacity="0.7" filter="url(#aiGlow)"/>
+  <g stroke="#EAF2FF" stroke-width="1.5" opacity="0.5" fill="none">
+    <path d="M540 320 C570 300 630 300 660 320 M530 370 C570 396 630 396 670 370"/>
+    <ellipse cx="600" cy="360" rx="60" ry="128"/>
+  </g>
+  <g filter="url(#aiGlow)">
+    <circle cx="848" cy="290" r="7" fill="#FF304F"/>
+    <circle cx="356" cy="452" r="6" fill="#397BFF"/>
+    <circle cx="770" cy="480" r="5" fill="#EAF2FF"/>
+  </g>
+  <g stroke="#FF304F" stroke-width="2.5" fill="none" opacity="0.85" filter="url(#aiGlow)">
+    <path d="M600 230 A130 130 0 0 1 713 295"/>
+  </g>
+  <g fill="#8FB2FF">
+    <circle cx="180" cy="160" r="2" opacity="0.7"/><circle cx="300" cy="120" r="1.5" opacity="0.5"/>
+    <circle cx="980" cy="140" r="2" opacity="0.7"/><circle cx="1060" cy="260" r="1.5" opacity="0.5"/>
+    <circle cx="140" cy="420" r="1.5" opacity="0.5"/><circle cx="1080" cy="520" r="2" opacity="0.6"/>
+    <circle cx="240" cy="560" r="1.5" opacity="0.4"/><circle cx="920" cy="620" r="1.5" opacity="0.4"/>
+  </g>
+  <g stroke="#2A3A66" stroke-width="2" fill="none" opacity="0.8">
+    <path d="M120 700 H360 L420 640 H520"/><path d="M1080 700 H840 L780 640 H680"/>
+  </g>
+  <g fill="#397BFF" opacity="0.9">
+    <circle cx="520" cy="640" r="4"/><circle cx="680" cy="640" r="4"/>
+  </g>
+</svg>

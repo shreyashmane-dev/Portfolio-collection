@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="jacket" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#141826"/>
+      <stop offset="0.55" stop-color="#0B0E17"/>
+      <stop offset="1" stop-color="#070910"/>
+    </linearGradient>
+    <linearGradient id="hairG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#171C2C"/>
+      <stop offset="1" stop-color="#0A0C13"/>
+    </linearGradient>
+    <linearGradient id="faceG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#232838"/>
+      <stop offset="1" stop-color="#12151F"/>
+    </linearGradient>
+    <filter id="glowA" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowBig" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- HUD rings -->
+  <g fill="none" stroke-width="1.5">
+    <circle cx="400" cy="380" r="300" stroke="#397BFF" opacity="0.22"/>
+    <circle cx="400" cy="380" r="330" stroke="#FFFFFF" opacity="0.07" stroke-dasharray="4 14"/>
+    <path d="M 400 50 A 330 330 0 0 1 700 240" stroke="#FF304F" opacity="0.55" stroke-width="2.5"/>
+    <path d="M 130 560 A 330 330 0 0 1 90 380" stroke="#397BFF" opacity="0.6" stroke-width="2.5"/>
+    <circle cx="400" cy="380" r="252" stroke="#FFFFFF" opacity="0.06" stroke-dasharray="2 10"/>
+  </g>
+  <g stroke="#FF304F" stroke-width="2" opacity="0.8">
+    <line x1="700" y1="236" x2="742" y2="218"/><line x1="742" y1="218" x2="784" y2="218"/>
+  </g>
+  <g stroke="#397BFF" stroke-width="2" opacity="0.8">
+    <line x1="96" y1="556" x2="56" y2="580"/><line x1="56" y1="580" x2="16" y2="580"/>
+  </g>
+  <!-- shoulders / jacket -->
+  <path d="M120 1000 C130 800 180 690 268 640 C310 616 350 606 392 602 L470 602 C540 610 610 640 656 700 C700 758 716 860 720 1000 Z" fill="url(#jacket)"/>
+  <!-- collar -->
+  <path d="M300 660 C310 590 330 540 360 512 L470 512 C500 548 516 600 520 664 C470 692 348 692 300 660 Z" fill="#0D1019"/>
+  <path d="M360 512 C380 540 452 540 470 512 L470 560 C440 586 388 586 360 560 Z" fill="#080A10"/>
+  <!-- neck -->
+  <path d="M368 470 L368 540 C390 560 442 560 462 538 L462 462 Z" fill="#181C29"/>
+  <!-- head profile facing left -->
+  <path d="M398 218
+    C356 224 330 254 324 292
+    C322 306 320 318 312 330
+    L296 352 C292 358 294 364 300 366
+    L314 370 C312 380 310 388 314 394
+    C310 398 310 406 316 410
+    C314 420 320 432 334 438
+    C348 448 368 452 388 452
+    C420 452 448 440 462 420
+    C478 396 486 360 486 322
+    C486 268 450 214 398 218 Z" fill="url(#faceG)"/>
+  <!-- hair -->
+  <path d="M398 212
+    C340 214 306 252 302 296
+    L286 280 L306 268 L290 240 L318 250 L310 212 L340 232
+    L340 190 L366 220 L378 176 L394 214 L416 172 L424 214
+    L452 184 L450 222 L484 202 L472 240 L504 232 L486 268
+    L512 272 L490 300
+    C496 340 494 384 482 416
+    L470 400 C480 360 478 320 466 292
+    C450 258 428 240 400 238
+    C368 236 344 254 334 282
+    L322 300 C314 262 344 220 398 212 Z" fill="url(#hairG)"/>
+  <path d="M340 232 L352 252 M378 214 L384 240 M416 210 L414 238 M450 224 L440 248" stroke="#232B42" stroke-width="2.5" fill="none" opacity="0.9"/>
+  <!-- eye -->
+  <path d="M318 318 L348 312 L344 328 L322 330 Z" fill="#05060A"/>
+  <path d="M322 320 L342 316" stroke="#6FA8FF" stroke-width="3.5" stroke-linecap="round" filter="url(#glowA)"/>
+  <path d="M314 306 L350 300" stroke="#0A0C12" stroke-width="4" stroke-linecap="round"/>
+  <!-- jacket details -->
+  <g stroke="#1E2436" stroke-width="2.5" fill="none">
+    <path d="M268 640 C300 700 320 800 324 1000"/>
+    <path d="M656 700 C620 770 604 880 600 1000"/>
+    <path d="M416 690 L416 1000"/>
+  </g>
+  <line x1="416" y1="690" x2="416" y2="1000" stroke="#FF304F" stroke-width="2" opacity="0.7" filter="url(#glowA)"/>
+  <path d="M300 660 C348 692 470 692 520 664" stroke="#397BFF" stroke-width="2" fill="none" opacity="0.5" filter="url(#glowA)"/>
+  <g fill="#397BFF" opacity="0.85">
+    <rect x="560" y="760" width="46" height="6" rx="2"/>
+    <rect x="560" y="776" width="30" height="6" rx="2" opacity="0.5"/>
+  </g>
+  <!-- rim lights -->
+  <g filter="url(#glowA)" fill="none" stroke-linecap="round">
+    <path d="M302 296 C306 252 340 214 398 212" stroke="#397BFF" stroke-width="3" opacity="0.9"/>
+    <path d="M312 330 L296 352 C292 358 294 364 300 366 L314 370" stroke="#397BFF" stroke-width="2.5" opacity="0.85"/>
+    <path d="M512 272 L490 300 C496 340 494 384 482 416" stroke="#FF304F" stroke-width="3" opacity="0.9"/>
+    <path d="M462 420 C478 396 486 360 486 322" stroke="#FF304F" stroke-width="2.5" opacity="0.6"/>
+    <path d="M656 700 C700 758 716 860 720 1000" stroke="#FF304F" stroke-width="3" opacity="0.7"/>
+    <path d="M120 1000 C130 800 180 690 268 640" stroke="#397BFF" stroke-width="3" opacity="0.7"/>
+  </g>
+  <!-- floating HUD panels -->
+  <g font-family="monospace" font-size="13">
+    <g opacity="0.9">
+      <rect x="560" y="300" width="180" height="72" fill="#0D1120" fill-opacity="0.72" stroke="#397BFF" stroke-opacity="0.4"/>
+      <text x="576" y="326" fill="#6FA8FF">SYS.042 // ONLINE</text>
+      <rect x="576" y="340" width="120" height="4" fill="#397BFF" opacity="0.7"/>
+      <rect x="576" y="352" width="80" height="4" fill="#FFFFFF" opacity="0.2"/>
+    </g>
+    <g opacity="0.9">
+      <rect x="60" y="700" width="164" height="64" fill="#0D1120" fill-opacity="0.72" stroke="#FF304F" stroke-opacity="0.4"/>
+      <text x="76" y="726" fill="#FF6B82">CREATIVITY.EXE</text>
+      <rect x="76" y="740" width="100" height="4" fill="#FF304F" opacity="0.7"/>
+    </g>
+  </g>
+  <g stroke="#FFFFFF" opacity="0.35" stroke-width="1.5">
+    <path d="M640 130 h18 M649 121 v18"/><path d="M120 200 h18 M129 191 v18"/><path d="M700 560 h18 M709 551 v18"/>
+  </g>
+</svg>

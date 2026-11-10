@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="termBg" cx="0.5" cy="0.4" r="0.9">
+      <stop offset="0" stop-color="#0D1226"/>
+      <stop offset="1" stop-color="#05060B"/>
+    </radialGradient>
+    <linearGradient id="termPanel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#10141F"/>
+      <stop offset="1" stop-color="#0A0D15"/>
+    </linearGradient>
+    <linearGradient id="streak" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#397BFF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#397BFF" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#397BFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="tGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#termBg)"/>
+  <polygon points="700,0 980,0 480,800 200,800" fill="url(#streak)"/>
+  <!-- terminal window -->
+  <rect x="180" y="120" width="840" height="560" rx="12" fill="url(#termPanel)" stroke="#232B42" stroke-width="2"/>
+  <rect x="180" y="120" width="840" height="52" rx="12" fill="#151A28"/>
+  <rect x="180" y="158" width="840" height="14" fill="#151A28"/>
+  <circle cx="214" cy="146" r="7" fill="#FF304F"/><circle cx="240" cy="146" r="7" fill="#3A4666"/><circle cx="266" cy="146" r="7" fill="#397BFF"/>
+  <g font-family="monospace" font-size="15" fill="#4A5A86"><text x="600" y="151" text-anchor="middle">anos — developer suite</text></g>
+  <!-- code lines -->
+  <g font-family="monospace" font-size="19">
+    <text x="220" y="216" fill="#FF6B82">❯ anos init project --stack react</text>
+    <text x="220" y="252" fill="#6FA8FF">  scaffolding workspace...</text>
+    <text x="220" y="288" fill="#8B93A8">  ✓ templates resolved</text>
+    <text x="220" y="324" fill="#8B93A8">  ✓ dependencies linked</text>
+    <text x="220" y="360" fill="#6FA8FF">  ✓ git workflow armed</text>
+    <text x="220" y="412" fill="#FF6B82">❯ anos diag --system</text>
+    <text x="220" y="448" fill="#8B93A8">  cpu ████████░░ 82%</text>
+    <text x="220" y="484" fill="#8B93A8">  mem ██████░░░░ 61%</text>
+    <text x="220" y="520" fill="#6FA8FF">  all systems nominal</text>
+    <text x="220" y="572" fill="#FF6B82">❯ anos ship</text>
+    <text x="220" y="608" fill="#EAF2FF">  building something impossible</text>
+  </g>
+  <rect x="566" y="594" width="12" height="20" fill="#397BFF" filter="url(#tGlow)"/>
+  <!-- progress bar -->
+  <rect x="220" y="636" width="760" height="8" rx="4" fill="#1A2033"/>
+  <rect x="220" y="636" width="570" height="8" rx="4" fill="#397BFF" filter="url(#tGlow)"/>
+  <!-- floating glyphs -->
+  <g stroke="#397BFF" stroke-width="2.5" fill="none" opacity="0.7" filter="url(#tGlow)">
+    <path d="M120 260 L90 290 L120 320"/><path d="M1080 480 L1110 510 L1080 540"/>
+  </g>
+  <g stroke="#FF304F" stroke-width="2.5" fill="none" opacity="0.7" filter="url(#tGlow)">
+    <path d="M1060 200 h40 M1080 180 v40"/>
+  </g>
+  <g fill="#8FB2FF">
+    <circle cx="140" cy="140" r="2" opacity="0.6"/><circle cx="1090" cy="660" r="2" opacity="0.6"/><circle cx="1120" cy="120" r="1.5" opacity="0.5"/><circle cx="90" cy="620" r="1.5" opacity="0.5"/>
+  </g>
+</svg>

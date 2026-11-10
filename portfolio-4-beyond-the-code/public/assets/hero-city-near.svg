@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <linearGradient id="nearB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0D1120"/>
+      <stop offset="1" stop-color="#070910"/>
+    </linearGradient>
+    <pattern id="winNear" width="20" height="26" patternUnits="userSpaceOnUse">
+      <rect x="4" y="5" width="6" height="9" fill="#8FB2FF" opacity="0.5"/>
+      <rect x="13" y="16" width="6" height="8" fill="#FFC98A" opacity="0.32"/>
+      <rect x="4" y="18" width="6" height="6" fill="#5F7DC9" opacity="0.2"/>
+    </pattern>
+    <pattern id="winRed" width="22" height="28" patternUnits="userSpaceOnUse">
+      <rect x="5" y="6" width="6" height="9" fill="#FF6B82" opacity="0.4"/>
+      <rect x="14" y="18" width="6" height="8" fill="#FF304F" opacity="0.25"/>
+    </pattern>
+    <linearGradient id="nearFog" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A0E1C" stop-opacity="0"/>
+      <stop offset="1" stop-color="#08090C" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="glowR" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g fill="url(#nearB)">
+    <path d="M-20 620V200h150v-40h30v40h40v420z"/>
+    <path d="M240 620V120h120v500z"/>
+    <path d="M400 620V260h170v360z"/>
+    <path d="M610 620V70h40V40h90v30h40v550z"/>
+    <path d="M830 620V210h140v410z"/>
+    <path d="M1010 620V150h130v470z"/>
+    <path d="M1180 620V300h150v320z"/>
+    <path d="M1370 620V90h50V60h80v30h50v530z"/>
+    <path d="M1560 620V240h60v380z"/>
+  </g>
+  <g opacity="0.95">
+    <rect x="252" y="135" width="96" height="470" fill="url(#winNear)"/>
+    <rect x="622" y="85" width="146" height="520" fill="url(#winNear)"/>
+    <rect x="1022" y="165" width="106" height="440" fill="url(#winNear)"/>
+    <rect x="1382" y="105" width="156" height="500" fill="url(#winNear)"/>
+    <rect x="-8" y="215" width="196" height="390" fill="url(#winRed)"/>
+    <rect x="412" y="275" width="146" height="330" fill="url(#winRed)" opacity="0.8"/>
+    <rect x="842" y="225" width="116" height="380" fill="url(#winNear)" opacity="0.8"/>
+    <rect x="1192" y="315" width="126" height="290" fill="url(#winRed)" opacity="0.7"/>
+  </g>
+  <g stroke="#0D1120" stroke-width="5">
+    <line x1="300" y1="120" x2="300" y2="50"/><line x1="700" y1="40" x2="700" y2="-10"/>
+    <line x1="1460" y1="60" x2="1460" y2="0"/><line x1="1075" y1="150" x2="1075" y2="92"/>
+  </g>
+  <g filter="url(#glowR)">
+    <circle cx="300" cy="48" r="4" fill="#FF304F"/>
+    <circle cx="1460" cy="-2" r="4" fill="#FF304F"/>
+    <circle cx="1075" cy="90" r="4" fill="#FF304F"/>
+  </g>
+  <g stroke="#397BFF" stroke-width="2" opacity="0.65" filter="url(#glowR)">
+    <line x1="252" y1="132" x2="348" y2="132"/>
+    <line x1="1022" y1="162" x2="1128" y2="162"/>
+  </g>
+  <!-- billboards + skybridge -->
+  <g filter="url(#glowR)">
+    <rect x="430" y="300" width="110" height="46" fill="#FF304F" opacity="0.22"/>
+    <rect x="438" y="308" width="94" height="6" fill="#FF6B82" opacity="0.6"/>
+    <rect x="438" y="322" width="64" height="6" fill="#FF6B82" opacity="0.4"/>
+    <rect x="1210" y="340" width="96" height="40" fill="#397BFF" opacity="0.22"/>
+    <rect x="1218" y="348" width="80" height="6" fill="#8FB2FF" opacity="0.6"/>
+    <rect x="1218" y="362" width="52" height="6" fill="#8FB2FF" opacity="0.4"/>
+  </g>
+  <rect x="560" y="330" width="60" height="10" fill="#0D1120"/>
+  <rect x="960" y="280" width="60" height="10" fill="#0D1120"/>
+  <g stroke="#0D1120" stroke-width="4">
+    <line x1="470" y1="260" x2="470" y2="212"/><line x1="1250" y1="300" x2="1250" y2="252"/>
+  </g>
+  <rect y="380" width="1600" height="240" fill="url(#nearFog)"/>
+</svg>

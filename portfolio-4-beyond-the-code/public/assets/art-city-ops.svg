@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="opsBg" cx="0.5" cy="0.4" r="0.9">
+      <stop offset="0" stop-color="#0E1428"/>
+      <stop offset="1" stop-color="#05060B"/>
+    </radialGradient>
+    <linearGradient id="bldg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1C2745"/>
+      <stop offset="1" stop-color="#0D1222"/>
+    </linearGradient>
+    <filter id="opsGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#opsBg)"/>
+  <!-- street grid -->
+  <g stroke="#1E2A4C" stroke-width="2" opacity="0.7">
+    <path d="M0 200 H1200 M0 340 H1200 M0 480 H1200 M0 620 H1200 M0 760 H1200"/>
+    <path d="M120 0 V800 M320 0 V800 M520 0 V800 M720 0 V800 M920 0 V800 M1120 0 V800"/>
+  </g>
+  <!-- city blocks -->
+  <g fill="url(#bldg)">
+    <rect x="150" y="230" width="140" height="80"/><rect x="350" y="230" width="140" height="80"/>
+    <rect x="550" y="230" width="140" height="80"/><rect x="750" y="230" width="140" height="80"/>
+    <rect x="150" y="370" width="140" height="80"/><rect x="350" y="370" width="140" height="80"/>
+    <rect x="750" y="370" width="140" height="80"/><rect x="950" y="370" width="140" height="80"/>
+    <rect x="150" y="510" width="140" height="80"/><rect x="550" y="510" width="140" height="80"/>
+    <rect x="750" y="510" width="140" height="80"/><rect x="950" y="510" width="140" height="80"/>
+    <rect x="350" y="650" width="140" height="80"/><rect x="750" y="650" width="140" height="80"/>
+  </g>
+  <g fill="#8FB2FF" opacity="0.35">
+    <rect x="162" y="242" width="24" height="10"/><rect x="196" y="242" width="24" height="10"/><rect x="162" y="262" width="24" height="10"/>
+    <rect x="562" y="242" width="24" height="10"/><rect x="596" y="262" width="24" height="10"/>
+    <rect x="762" y="382" width="24" height="10"/><rect x="796" y="402" width="24" height="10"/>
+    <rect x="162" y="522" width="24" height="10"/><rect x="562" y="542" width="24" height="10"/>
+    <rect x="962" y="522" width="24" height="10"/><rect x="362" y="662" width="24" height="10"/>
+  </g>
+  <!-- network links -->
+  <g stroke="#397BFF" stroke-width="2.5" fill="none" opacity="0.85" filter="url(#opsGlow)">
+    <path d="M220 270 L420 410 L620 270 L820 410 L1020 550"/>
+    <path d="M420 410 L220 550 L620 550 L820 410"/>
+    <path d="M620 550 L420 690"/>
+  </g>
+  <g fill="#397BFF" filter="url(#opsGlow)">
+    <circle cx="220" cy="270" r="7"/><circle cx="620" cy="270" r="7"/><circle cx="820" cy="410" r="7"/>
+    <circle cx="1020" cy="550" r="7"/><circle cx="220" cy="550" r="7"/><circle cx="620" cy="550" r="7"/><circle cx="420" cy="690" r="7"/>
+  </g>
+  <!-- alert node -->
+  <g filter="url(#opsGlow)">
+    <circle cx="420" cy="410" r="10" fill="#FF304F"/>
+    <circle cx="420" cy="410" r="26" fill="none" stroke="#FF304F" stroke-width="2" opacity="0.7"/>
+    <circle cx="420" cy="410" r="44" fill="none" stroke="#FF304F" stroke-width="1.5" opacity="0.35"/>
+  </g>
+  <!-- scan line + HUD -->
+  <rect x="0" y="120" width="1200" height="2" fill="#397BFF" opacity="0.3"/>
+  <g font-family="monospace" font-size="15" fill="#6FA8FF" opacity="0.85">
+    <text x="40" y="60">GRID.SYNC // 97.4%</text>
+    <text x="40" y="84" fill="#FF6B82">NODE.07 ALERT</text>
+  </g>
+  <g stroke="#FFFFFF" opacity="0.25" stroke-width="1.5">
+    <path d="M1120 60 h24 M1132 48 v24"/><path d="M60 730 h24 M72 718 v24"/>
+  </g>
+</svg>
