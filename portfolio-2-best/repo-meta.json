@@ -1,0 +1,538 @@
+{
+ "OmSearch": {
+  "fork": false,
+  "description": null,
+  "language": "Python",
+  "homepage": null,
+  "pushed_at": "2026-11-10T03:56:17Z",
+  "readme_size": 14672,
+  "images": [],
+  "default_branch": "main",
+  "error": null
+ },
+ "Nexyris": {
+  "fork": false,
+  "description": null,
+  "language": "TypeScript",
+  "homepage": null,
+  "pushed_at": "2026-11-03T20:23:48Z",
+  "readme_size": 4908,
+  "images": [],
+  "default_branch": "main",
+  "error": null
+ },
+ "Secure-codeb-AI": {
+  "fork": false,
+  "description": null,
+  "language": "Python",
+  "homepage": null,
+  "pushed_at": "2026-11-06T13:37:22Z",
+  "readme_size": 5731,
+  "images": [],
+  "default_branch": "main",
+  "error": null
+ },
+ "Drishti-AI": {
+  "fork": false,
+  "description": null,
+  "language": "Python",
+  "homepage": null,
+  "pushed_at": "2026-11-08T18:37:03Z",
+  "readme_size": 11006,
+  "images": [
+   "https://img.shields.io/badge/Python-3.10%2B-blue.svg?style=for-the-badge&logo=python&logoColor=white",
+   "https://img.shields.io/badge/PyTorch-2.x-EE4C2C.svg?style=for-the-badge&logo=pytorch&logoColor=white",
+   "https://img.shields.io/badge/Backbone-EfficientNet--B3-0284c7.svg?style=for-the-badge",
+   "https://img.shields.io/badge/Attention-Dual_CBAM-7c3aed.svg?style=for-the-badge",
+   "https://img.shields.io/badge/API-FastAPI_v2.0-059669.svg?style=for-the-badge&logo=fastapi&logoColor=white",
+   "https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge",
+   "https://img.shields.io/badge/\ud83d\udce5_Download_Model_Weights-drishti__best__model.pth_(44.2_MB)-7c3aed?style=for-the-badge&logo=pytorch&logoColor=white",
+   "https://img.shields.io/badge/\ud83d\udcbb_Download_Source_Code-ZIP_Archive-0284c7?style=for-the-badge&logo=github&logoColor=white"
+  ],
+  "default_branch": "main",
+  "error": null
+ },
+ "krushi-direct": {
+  "fork": false,
+  "description": null,
+  "language": "TypeScript",
+  "homepage": "https://krushi-direct-three.vercel.app",
+  "pushed_at": "2026-11-08T18:37:00Z",
+  "readme_size": 11672,
+  "images": [],
+  "default_branch": "main",
+  "error": null
+ },
+ "zynth-browser": {
+  "fork": false,
+  "description": null,
+  "language": "Dart",
+  "homepage": null,
+  "pushed_at": "2026-11-08T18:37:09Z",
+  "readme_size": 5336,
+  "images": [],
+  "default_branch": "main",
+  "error": null
+ },
+ "dev-tools-suite": {
+  "fork": false,
+  "description": "A professional Windows developer toolkit for setup, diagnostics, project creation, GitHub workflows, package management, and system utilities.",
+  "language": "Batchfile",
+  "homepage": null,
+  "pushed_at": "2026-10-16T17:46:45Z",
+  "readme_size": 31552,
+  "images": [
+   "https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-blue?logo=windows",
+   "https://img.shields.io/badge/License-MIT-green.svg",
+   "https://img.shields.io/badge/Release-v1.0.0-cyan.svg",
+   "https://img.shields.io/badge/Tools-11%20Active-brightgreen.svg",
+   "https://img.shields.io/badge/Provider-AnoS-06b6d4.svg"
+  ],
+  "default_branch": "main",
+  "error": null
+ },
+ "Anything": {
+  "fork": false,
+  "description": null,
+  "language": "Python",
+  "homepage": null,
+  "pushed_at": "2026-10-22T10:59:16Z",
+  "readme_size": 714,
+  "images": [],
+  "default_branch": "main",
+  "error": null
+ },
+ "First-Aid": {
+  "fork": false,
+  "description": null,
+  "language": "TypeScript",
+  "homepage": "https://first-aid-three.vercel.app",
+  "pushed_at": "2026-11-08T18:37:06Z",
+  "readme_size": 0,
+  "images": [],
+  "default_branch": "main",
+  "error": null
+ },
+ "Lumora": {
+  "fork": false,
+  "description": null,
+  "language": "TypeScript",
+  "homepage": null,
+  "pushed_at": "2026-10-23T18:03:44Z",
+  "readme_size": 20675,
+  "images": [
+   "https://img.shields.io/badge/Next.js-16.3-000000?style=for-the-badge&logo=next.js&logoColor=white",
+   "https://img.shields.io/badge/FastAPI-0.141-009688?style=for-the-badge&logo=fastapi&logoColor=white",
+   "https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white",
+   "https://img.shields.io/badge/Python-3.14-3776AB?style=for-the-badge&logo=python&logoColor=white",
+   "https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white",
+   "https://img.shields.io/badge/Render-Deploy_Ready-46E3B7?style=for-the-badge&logo=render&logoColor=black",
+   "https://img.shields.io/badge/Firebase-Auth_%26_Firestore-FFCA28?style=for-the-badge&logo=firebase&logoColor=black",
+   "https://img.shields.io/badge/Tests-22%2F22_Passing-brightgreen?style=for-the-badge"
+  ],
+  "default_branch": "main",
+  "error": null
+ },
+ "SecurePay-AI": {
+  "fork": false,
+  "description": null,
+  "language": "JavaScript",
+  "homepage": null,
+  "pushed_at": "2026-11-06T13:37:19Z",
+  "readme_size": 6625,
+  "images": [],
+  "default_branch": "main",
+  "error": null
+ },
+ "Xai-governance-platform_M": {
+  "fork": false,
+  "description": null,
+  "language": "JavaScript",
+  "homepage": null,
+  "pushed_at": "2026-11-05T20:54:41Z",
+  "readme_size": 2801,
+  "images": [],
+  "default_branch": "main",
+  "error": null
+ },
+ "LifeOS": {
+  "fork": true,
+  "description": "1st team project with buddy",
+  "language": "TypeScript",
+  "homepage": null,
+  "pushed_at": "2026-10-28T00:53:38Z",
+  "readme_size": 3582,
+  "images": [],
+  "default_branch": "main",
+  "error": null
+ },
+ "MessMate": {
+  "fork": false,
+  "description": null,
+  "language": "TypeScript",
+  "homepage": "https://mess-mate-zeta.vercel.app",
+  "pushed_at": "2026-11-09T01:21:43Z",
+  "readme_size": 3923,
+  "images": [
+   "https://img.shields.io/badge/Next.js-15+-black?style=for-the-badge&logo=next.js",
+   "https://img.shields.io/badge/Firebase-Realtime-FFCA28?style=for-the-badge&logo=firebase",
+   "https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css",
+   "https://img.shields.io/badge/Typescript-Ready-3178C6?style=for-the-badge&logo=typescript",
+   "./messmate_readme_banner_1778412364055.png",
+   "./messmate_features_illustration_1778412547714.png"
+  ],
+  "default_branch": "main",
+  "error": null
+ },
+ "Smart-Library-Management-System": {
+  "fork": false,
+  "description": null,
+  "language": "JavaScript",
+  "homepage": null,
+  "pushed_at": "2026-11-08T01:00:09Z",
+  "readme_size": 1124,
+  "images": [],
+  "default_branch": "main",
+  "error": null
+ },
+ "VireHire-AI": {
+  "fork": false,
+  "description": null,
+  "language": "TypeScript",
+  "homepage": "https://vire-hire-ai.vercel.app",
+  "pushed_at": "2026-11-03T03:15:15Z",
+  "readme_size": 4605,
+  "images": [
+   "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400",
+   "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=400",
+   "https://images.unsplash.com/photo-1522071823991-b9671f903f70?auto=format&fit=crop&q=80&w=400"
+  ],
+  "default_branch": "main",
+  "error": null
+ },
+ "ElectOS-Ai-Civic": {
+  "fork": false,
+  "description": null,
+  "language": "TypeScript",
+  "homepage": null,
+  "pushed_at": "2026-11-06T20:12:24Z",
+  "readme_size": 1066,
+  "images": [],
+  "default_branch": "main",
+  "error": null
+ },
+ "Synapse_Messenger": {
+  "fork": false,
+  "description": null,
+  "language": "JavaScript",
+  "homepage": "https://synapse-messenger.vercel.app",
+  "pushed_at": "2026-11-05T01:57:00Z",
+  "readme_size": 1054,
+  "images": [],
+  "default_branch": "main",
+  "error": null
+ },
+ "WindCast-AI": {
+  "fork": false,
+  "description": null,
+  "language": "TypeScript",
+  "homepage": "https://wind-cast-ai.vercel.app",
+  "pushed_at": "2026-11-06T13:37:25Z",
+  "readme_size": 6514,
+  "images": [],
+  "default_branch": "main",
+  "error": null
+ },
+ "Secure-Focus-App": {
+  "fork": false,
+  "description": null,
+  "language": "Kotlin",
+  "homepage": "https://secure-focus-app.vercel.app",
+  "pushed_at": "2026-11-06T20:12:37Z",
+  "readme_size": 2080,
+  "images": [],
+  "default_branch": "main",
+  "error": null
+ },
+ "Veyra": {
+  "fork": false,
+  "description": null,
+  "language": "Python",
+  "homepage": null,
+  "pushed_at": "2026-11-08T12:37:45Z",
+  "readme_size": 1171,
+  "images": [],
+  "default_branch": "main",
+  "error": null
+ },
+ "MahaResilience": {
+  "fork": true,
+  "description": "Second Year CEP project with the teammates",
+  "language": "TypeScript",
+  "homepage": null,
+  "pushed_at": "2026-11-07T12:17:00Z",
+  "readme_size": 45,
+  "images": [],
+  "default_branch": "main",
+  "error": null
+ },
+ "ReliefSync": {
+  "fork": false,
+  "description": null,
+  "language": "HTML",
+  "homepage": null,
+  "pushed_at": "2026-11-04T13:38:51Z",
+  "readme_size": 0,
+  "images": [],
+  "default_branch": "main",
+  "error": null
+ },
+ "WindCast-AI-MINI-MODEL": {
+  "fork": null,
+  "description": null,
+  "language": null,
+  "homepage": null,
+  "pushed_at": null,
+  "readme_size": 768,
+  "images": [],
+  "default_branch": null,
+  "error": null
+ },
+ "Xai-governance-platform": {
+  "fork": null,
+  "description": null,
+  "language": null,
+  "homepage": null,
+  "pushed_at": null,
+  "readme_size": 889,
+  "images": [],
+  "default_branch": null,
+  "error": null
+ },
+ "aivora-web": {
+  "fork": null,
+  "description": null,
+  "language": null,
+  "homepage": null,
+  "pushed_at": null,
+  "readme_size": 3562,
+  "images": [
+   "./screenshots/home.jpeg",
+   "./screenshots/dashboard.jpeg",
+   "./screenshots/dashboard-2.jpeg",
+   "./screenshots/ai-chat.jpeg",
+   "./screenshots/navbar.jpeg",
+   "./screenshots/login.jpeg",
+   "./screenshots/profile.jpeg",
+   "./screenshots/SOS-functions.jpeg"
+  ],
+  "default_branch": null,
+  "error": null
+ },
+ "Expense-tacker-web": {
+  "fork": null,
+  "description": null,
+  "language": null,
+  "homepage": null,
+  "pushed_at": null,
+  "readme_size": 439,
+  "images": [],
+  "default_branch": null,
+  "error": null
+ },
+ "Expense-tacker-capacitor-app": {
+  "fork": null,
+  "description": null,
+  "language": null,
+  "homepage": null,
+  "pushed_at": null,
+  "readme_size": 2605,
+  "images": [
+   "./screenshots/Dashboard.jpeg",
+   "./screenshots/charts.jpeg",
+   "./screenshots/insights.jpeg",
+   "./screenshots/history-tab.jpeg",
+   "./screenshots/login-page.jpeg",
+   "./screenshots/profile.jpeg"
+  ],
+  "default_branch": null,
+  "error": null
+ },
+ "aivora-capacitor-app": {
+  "fork": null,
+  "description": null,
+  "language": null,
+  "homepage": null,
+  "pushed_at": null,
+  "readme_size": 457,
+  "images": [],
+  "default_branch": null,
+  "error": null
+ },
+ "Memora": {
+  "fork": null,
+  "description": null,
+  "language": null,
+  "homepage": null,
+  "pushed_at": null,
+  "readme_size": 1450,
+  "images": [],
+  "default_branch": null,
+  "error": null
+ },
+ "Mimora": {
+  "fork": null,
+  "description": null,
+  "language": null,
+  "homepage": null,
+  "pushed_at": null,
+  "readme_size": 742,
+  "images": [],
+  "default_branch": null,
+  "error": null
+ },
+ "Trained-Models": {
+  "fork": null,
+  "description": null,
+  "language": null,
+  "homepage": null,
+  "pushed_at": null,
+  "readme_size": 65,
+  "images": [],
+  "default_branch": null,
+  "error": null
+ },
+ "computer-networks-lab": {
+  "fork": null,
+  "description": null,
+  "language": null,
+  "homepage": null,
+  "pushed_at": null,
+  "readme_size": 3451,
+  "images": [],
+  "default_branch": null,
+  "error": null
+ },
+ "OOC-lab": {
+  "fork": null,
+  "description": null,
+  "language": null,
+  "homepage": null,
+  "pushed_at": null,
+  "readme_size": 2589,
+  "images": [],
+  "default_branch": null,
+  "error": null
+ },
+ "C-Programs": {
+  "fork": null,
+  "description": null,
+  "language": null,
+  "homepage": null,
+  "pushed_at": null,
+  "readme_size": 1962,
+  "images": [],
+  "default_branch": null,
+  "error": null
+ },
+ "C-lab": {
+  "fork": null,
+  "description": null,
+  "language": null,
+  "homepage": null,
+  "pushed_at": null,
+  "readme_size": 62,
+  "images": [],
+  "default_branch": null,
+  "error": null
+ },
+ "Recordly": {
+  "fork": null,
+  "description": null,
+  "language": null,
+  "homepage": null,
+  "pushed_at": null,
+  "readme_size": 11468,
+  "images": [
+   "https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white",
+   "https://github.com/user-attachments/assets/414b8838-6731-45d4-a815-6e3c0aa1fe52",
+   "https://img.shields.io/badge/macOS%20%7C%20Windows%20%7C%20Linux-111827?style=for-the-badge",
+   "https://img.shields.io/badge/open%20source-AGPL3.0-2563eb?style=for-the-badge",
+   "https://github.com/user-attachments/assets/e6d68606-5fc0-4f70-99cd-7521982dc13b",
+   "https://github.com/user-attachments/assets/3926ecfd-8652-4f2d-8da8-ac7641017cf5",
+   "./docs/media/feature1.gif",
+   "./docs/media/feature2.gif"
+  ],
+  "default_branch": null,
+  "error": null
+ },
+ "DevTrack-AI": {
+  "fork": null,
+  "description": null,
+  "language": null,
+  "homepage": null,
+  "pushed_at": null,
+  "readme_size": 241,
+  "images": [],
+  "default_branch": null,
+  "error": null
+ },
+ "BaisGaurd-XI": {
+  "fork": null,
+  "description": null,
+  "language": null,
+  "homepage": null,
+  "pushed_at": null,
+  "readme_size": 1087,
+  "images": [],
+  "default_branch": null,
+  "error": null
+ },
+ "Kashid_Snacks": {
+  "fork": null,
+  "description": null,
+  "language": null,
+  "homepage": null,
+  "pushed_at": null,
+  "readme_size": 1043,
+  "images": [],
+  "default_branch": null,
+  "error": null
+ },
+ "react-practice": {
+  "fork": null,
+  "description": null,
+  "language": null,
+  "homepage": null,
+  "pushed_at": null,
+  "readme_size": 14,
+  "images": [],
+  "default_branch": null,
+  "error": null
+ },
+ "skills-introduction-to-github": {
+  "fork": null,
+  "description": null,
+  "language": null,
+  "homepage": null,
+  "pushed_at": null,
+  "readme_size": 654,
+  "images": [
+   "https://img.shields.io/badge/Go%20to%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935",
+   "https://octodex.github.com/images/Professortocat_v2.png"
+  ],
+  "default_branch": null,
+  "error": null
+ },
+ "RepoPulse": {
+  "fork": null,
+  "description": null,
+  "language": null,
+  "homepage": null,
+  "pushed_at": null,
+  "readme_size": 1300,
+  "images": [],
+  "default_branch": null,
+  "error": null
+ }
+}
