@@ -1,10 +1,77 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useMemo, useEffect, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Float } from "@react-three/drei";
+import { Float, useGLTF, useAnimations } from "@react-three/drei";
 import * as THREE from "three";
-import { Katana } from "./Katana";
+import { clone } from "three/examples/jsm/utils/SkeletonUtils.js";
+
+function BlenderKatana({ scale = 2.1, edgeIntensity = 1.8 }: { scale?: number; edgeIntensity?: number }) {
+  const { scene, animations } = useGLTF("/models/katana.glb");
+
+  const model = useMemo(() => {
+    const c = clone(scene);
+    const rig = c.getObjectByName("Katana_Rig");
+    if (rig) {
+      // Neutralize Blender's presentation tilt so the hero rig controls rotation cleanly
+      rig.rotation.set(0, 0, 0);
+    }
+
+    c.traverse((obj) => {
+      if ((obj as THREE.Mesh).isMesh) {
+        const mesh = obj as THREE.Mesh;
+        mesh.castShadow = true;
+        mesh.frustumCulled = false;
+
+        const enhanceMat = (m: THREE.Material) => {
+          const mat = m.clone() as THREE.MeshStandardMaterial;
+          if (mat.emissive && (mat.emissive.r > 0.05 || mat.emissive.g > 0.05 || mat.emissive.b > 0.05)) {
+            const base = mat.emissiveIntensity && mat.emissiveIntensity > 0 ? mat.emissiveIntensity : 1;
+            mat.emissiveIntensity = base * edgeIntensity;
+            mat.toneMapped = false;
+          }
+          return mat;
+        };
+
+        if (Array.isArray(mesh.material)) {
+          mesh.material = mesh.material.map(enhanceMat);
+        } else if (mesh.material) {
+          mesh.material = enhanceMat(mesh.material);
+        }
+      }
+    });
+
+    return c;
+  }, [scene, edgeIntensity]);
+
+  // Keep Blender's cord sway & root breathe from idle_float without overriding Hero Rig's tilt/spin
+  const cordClips = useMemo(() => {
+    const idle = animations.find((a) => a.name === "idle_float");
+    if (!idle) return [];
+    const filtered = idle.clone();
+    filtered.tracks = filtered.tracks.filter((t) => !t.name.startsWith("Katana_Rig."));
+    return [filtered];
+  }, [animations]);
+
+  const { ref, actions } = useAnimations(cordClips);
+
+  useEffect(() => {
+    const action = actions["idle_float"];
+    if (!action) return;
+    action.reset().setLoop(THREE.LoopRepeat, Infinity).play();
+    return () => {
+      action.stop();
+    };
+  }, [actions]);
+
+  return (
+    <group ref={ref} scale={scale * 1.75}>
+      <primitive object={model} />
+    </group>
+  );
+}
+
+useGLTF.preload("/models/katana.glb");
 
 function Rig() {
   const group = useRef<THREE.Group>(null);
@@ -30,7 +97,9 @@ function Rig() {
     <>
       <Float speed={1.6} rotationIntensity={0.15} floatIntensity={0.6}>
         <group ref={group} rotation={[0.15, 0, -0.6]} position={[0, -0.5, 0]}>
-          <Katana scale={2.1} edgeIntensity={2} />
+          <Suspense fallback={null}>
+            <BlenderKatana scale={2.1} edgeIntensity={2} />
+          </Suspense>
         </group>
       </Float>
       <mesh ref={ring} rotation={[Math.PI / 2.6, 0, 0]} position={[0, 0.2, -1.5]}>

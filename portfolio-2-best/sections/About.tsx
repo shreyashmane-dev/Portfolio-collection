@@ -10,10 +10,10 @@ import { EASE } from "@/lib/motion";
 gsap.registerPlugin(ScrollTrigger);
 
 const facts = [
-  { icon: GraduationCap, k: "Degree", v: `${site.academics.degree} — ${site.academics.branch}` },
+  { icon: GraduationCap, k: "Degree", v: "B.Tech — Computer Science & Engineering" },
   { icon: Building2, k: "College", v: site.college },
   { icon: Award, k: "University", v: site.university },
-  { icon: MapPin, k: "Location", v: site.location },
+  { icon: MapPin, k: "Base", v: site.location },
 ];
 
 export function About() {
@@ -90,17 +90,7 @@ export function About() {
             </span>
           </div>
 
-          {/* Factual biographical narrative for indexing & crawlers */}
-          <div className="mt-8 max-w-2xl text-sm leading-relaxed text-muted md:text-base space-y-3">
-            <p>
-              Shreyash Mane is an undergraduate Computer Science and Engineering student at {site.college}, affiliated with {site.university} in Maharashtra, India. His engineering work spans 43 repositories focusing on information retrieval, applied artificial intelligence, full-stack web platforms, and embedded microcontroller hardware.
-            </p>
-            <p>
-              Rather than theoretical exercises, every initiative centers on working code: from architecting independent search engine pipelines and computer-vision diagnostic tools to programming ESP32 and Arduino circuits with RFID access and ultrasonic telemetry.
-            </p>
-          </div>
-
-          <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {facts.map(({ icon: Icon, k, v }, i) => (
               <div
                 key={k}
@@ -115,7 +105,7 @@ export function About() {
             ))}
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-2">
+          <div className="mt-10 flex flex-wrap gap-2">
             {site.interests.map((interest) => (
               <span key={interest} className="interest-chip border border-line px-3 py-1.5 font-mono text-xs text-muted">
                 {interest}

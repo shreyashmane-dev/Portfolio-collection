@@ -141,9 +141,7 @@ export function Featured() {
       <div ref={stageRef} className="vh-full relative overflow-hidden">
         <div className="pointer-events-none absolute left-5 top-20 z-[60] md:left-10">
           <p className="label mb-2 text-red">03 / Featured</p>
-          <h2 className="font-display text-2xl uppercase tracking-wider text-ink md:text-3xl">
-            Selected <span className="text-stroke">Works</span>
-          </h2>
+          <h2 className="sr-only">Featured Projects</h2>
           <p className="font-mono text-xs text-muted" aria-live="polite">
             EP.{pad2(current + 1)} <span className="text-line-strong">/ {pad2(count)}</span>
           </p>

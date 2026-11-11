@@ -65,7 +65,7 @@ export function Career() {
         </div>
 
         <div className="acad-grid grid content-start gap-5">
-          <p className="label text-red">07 / Education</p>
+          <p className="label text-red">Academics</p>
           <div className="acad-block panel panel-slash-sm corner-ticks p-6">
             <h3 className="font-display text-3xl uppercase">{site.academics.degree} — CSE</h3>
             <p className="mt-2 text-sm text-muted">{site.academics.institution}</p>
