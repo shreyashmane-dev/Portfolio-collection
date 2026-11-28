@@ -15,7 +15,7 @@ export function Footer() {
   return (
     <footer className="border-t border-line py-8">
       <div className="mx-auto flex max-w-[110rem] flex-wrap items-center justify-between gap-4 px-5 md:px-10">
-        <p className="label">© 2026 {site.name} — Kolhapur, India</p>
+        <p className="label">© 2026 {site.fullName} ({site.name}) — Kolhapur, India</p>
         <div className="flex items-center gap-6">
           <a
             href={site.github}

@@ -1,5 +1,6 @@
 export const site = {
   name: "Shreyash Mane",
+  fullName: "Shreyash Santosh Mane",
   title: "Computer Science & Engineering Student",
   college: "D.Y. Patil College of Engineering, Kolhapur",
   university: "Shivaji University, Kolhapur",

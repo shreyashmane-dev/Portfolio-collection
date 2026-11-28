@@ -22,17 +22,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!project) return { title: "Project Not Found" };
 
   const canonicalUrl = `${siteUrl}/projects/${project.slug}`;
-  const title = `${project.name} | Shreyash Mane — ${project.tagline}`;
-  const description = `${project.name} is an open-source software project engineered by Shreyash Mane. ${project.description} Tech stack: ${project.tech.slice(0, 5).join(", ")}. Part of Shreyash Mane's portfolio.`;
+  const fullWithTagline = `${project.name} — ${project.tagline}`;
+  const title = fullWithTagline.length <= 44 ? fullWithTagline : project.name;
+  const rawDescription = `${project.name} by Shreyash Santosh Mane (Shreyash Mane): ${project.description} Stack: ${project.tech.slice(0, 4).join(", ")}.`;
+  const description = rawDescription.length > 158 ? `${rawDescription.slice(0, 155).trimEnd()}...` : rawDescription;
 
   return {
     title,
-    description: description.slice(0, 160),
+    description,
     keywords: [
       project.name,
       `${project.name} Shreyash Mane`,
+      `${project.name} Shreyash Santosh Mane`,
       `${project.name} GitHub`,
       "Shreyash Mane",
+      "Shreyash Santosh Mane",
       "Shreyash Mane portfolio",
       "Shreyash Mane projects",
       ...project.tech,
@@ -44,7 +48,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       type: "article",
       title: `${project.name} by Shreyash Mane`,
-      description: description.slice(0, 160),
+      description,
       url: canonicalUrl,
       siteName: "Shreyash Mane Portfolio",
       images: [
@@ -52,14 +56,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
           url: `/projects/${project.slug}/opengraph-image`,
           width: 1200,
           height: 630,
-          alt: `${project.name} — Architecture & Details by Shreyash Mane`,
+          alt: `${project.name} — Architecture & Details by Shreyash Santosh Mane`,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
       title: `${project.name} | Shreyash Mane`,
-      description: description.slice(0, 160),
+      description,
       images: [`/projects/${project.slug}/opengraph-image`],
     },
     robots: {
@@ -106,6 +110,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     author: {
       "@type": "Person",
       name: site.name,
+      alternateName: site.fullName,
       url: siteUrl,
       sameAs: [site.github, site.linkedin],
       jobTitle: "Computer Science & Engineering Student | Developer",
@@ -218,7 +223,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 <span>Developer &amp; Authorship</span>
               </div>
               <div className="mt-2 text-sm text-ink font-medium">
-                Engineered by <span className="text-blue font-bold">{site.name}</span>
+                Engineered by <span className="text-blue font-bold">{site.fullName}</span> ({site.name})
               </div>
               <p className="mt-1 text-xs text-muted leading-relaxed">
                 Computer Science &amp; Engineering Student at {site.college} ({site.university}).

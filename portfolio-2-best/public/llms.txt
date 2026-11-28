@@ -1,14 +1,18 @@
-# Shreyash Mane — Developer Profile & Portfolio
+# Shreyash Mane (Shreyash Santosh Mane) — Developer Profile & Portfolio
 > Computer Science and Engineering Student | AI & Full-Stack Developer | Creative Technologist
 
 - Name: Shreyash Mane
+- Full Name: Shreyash Santosh Mane
 - GitHub: https://github.com/shreyashmane-dev
 - LinkedIn: https://www.linkedin.com/in/shreyashmane-7675a4385
 - Email: shreyashmane649@gmail.com
 - Institution: D.Y. Patil College of Engineering, Kolhapur
 - Affiliation: Shivaji University, Kolhapur
-- Location: Maharashtra, India
-- Portfolio: https://shreyash-portfolio.vercel.app
+- Location: Kolhapur, Maharashtra, India
+- Official Portfolio: https://shreyash-portfolllio.vercel.app
+
+## Identity & Disambiguation
+Shreyash Santosh Mane (publicly known as Shreyash Mane, GitHub handle `shreyashmane-dev`) is a Computer Science and Engineering student at D.Y. Patil College of Engineering, Kolhapur, specializing in artificial intelligence, autonomous agents, full-stack software engineering, cybersecurity tools, and IoT systems.
 
 ## Core Focus Areas
 - Artificial Intelligence & Machine Learning (Agentic AI, LLM fine-tuning, RAG pipelines, Local LLMs)
@@ -18,24 +22,34 @@
 
 ## Flagship Open-Source Projects
 1. OmSearch: Neural semantic web search engine & real-time knowledge retrieval pipeline.
+   URL: https://shreyash-portfolllio.vercel.app/projects/omsearch
    Repo: https://github.com/shreyashmane-dev/OmSearch
 2. Nexyris Local: Sovereign offline-first AI studio with zero-telemetry local inference.
+   URL: https://shreyash-portfolllio.vercel.app/projects/nexyris
    Repo: https://github.com/shreyashmane-dev/Nexyris
 3. SecureCode AI: Autonomous AST-aware code vulnerability detection and remediation engine.
+   URL: https://shreyash-portfolllio.vercel.app/projects/securecode-ai
    Repo: https://github.com/shreyashmane-dev/Secure-codeb-AI
 4. Drishti AI: Intelligent assistive vision system for visual clarity and accessibility.
+   URL: https://shreyash-portfolllio.vercel.app/projects/drishti-ai
    Repo: https://github.com/shreyashmane-dev/Drishti-AI
 5. KisanDirect: Direct agricultural marketplace empowering farmers with price transparency.
+   URL: https://shreyash-portfolllio.vercel.app/projects/kisandirect
    Repo: https://github.com/shreyashmane-dev/krushi-direct
 6. Zynth Browser: High-performance distraction-free web browser with native privacy protection.
+   URL: https://shreyash-portfolllio.vercel.app/projects/zynth-browser
    Repo: https://github.com/shreyashmane-dev/zynth-browser
 7. DEV Tools Suite (AnoS): Comprehensive offline developer utility operating system.
+   URL: https://shreyash-portfolllio.vercel.app/projects/dev-tools-suite
    Repo: https://github.com/shreyashmane-dev/dev-tools-suite
 8. Smart Classroom Attendance System: Automated IoT biometric RFID attendance pipeline.
+   URL: https://shreyash-portfolllio.vercel.app/projects/anything
    Repo: https://github.com/shreyashmane-dev/Anything
 9. First Aid Hospital: Emergency medical service coordinator and triage assistance portal.
+   URL: https://shreyash-portfolllio.vercel.app/projects/first-aid
    Repo: https://github.com/shreyashmane-dev/First-Aid
 10. Lumora: Interactive spatial 3D audio-visual web experience.
+    URL: https://shreyash-portfolllio.vercel.app/projects/lumora
     Repo: https://github.com/shreyashmane-dev/Lumora
 
-For complete details on all 43 repositories and hardware designs, visit https://shreyash-portfolio.vercel.app/#archive.
+For complete details on all 43 repositories and hardware designs, visit https://shreyash-portfolllio.vercel.app/#archive.

@@ -6,8 +6,8 @@ import { getSiteUrl } from "@/lib/site-url";
 const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
-  title: "Credits & Colophon | Shreyash Mane",
-  description: "Asset, 3D model, font and library credits for the Shreyash Mane anime-inspired developer portfolio.",
+  title: "Credits & Colophon",
+  description: "Asset, 3D model, font and library credits for the Shreyash Santosh Mane (Shreyash Mane) developer portfolio.",
   alternates: {
     canonical: `${siteUrl}/credits`,
   },

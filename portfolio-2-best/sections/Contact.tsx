@@ -87,7 +87,7 @@ export function Contact() {
         </div>
 
         <p className="contact-reveal label mt-14">
-          {site.location} — open to internships, collaborations and hard problems.
+          {site.fullName} ({site.name}) · {site.location} — open to internships, collaborations and hard problems.
         </p>
       </div>
     </section>

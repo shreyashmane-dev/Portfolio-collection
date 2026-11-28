@@ -19,13 +19,17 @@ const siteUrl = getSiteUrl();
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Shreyash Mane | AI and Full-Stack Developer Portfolio",
+    default: "Shreyash Mane | Shreyash Santosh Mane — Developer Portfolio",
     template: "%s | Shreyash Mane",
   },
   description:
-    "Official portfolio of Shreyash Mane — Computer Science & Engineering student, AI and Full-Stack Developer building intelligent systems, developer tools, and IoT solutions.",
+    "Official portfolio of Shreyash Santosh Mane (Shreyash Mane), CSE student building AI, Full-Stack, developer tools and IoT hardware systems in Kolhapur.",
   keywords: [
     "Shreyash Mane",
+    "Shreyash Santosh Mane",
+    "Shreyash Santosh Mane portfolio",
+    "Shreyash Santosh Mane developer",
+    "Shreyash Santosh Mane GitHub",
     "Shreyash Mane portfolio",
     "Shreyash Mane developer",
     "Shreyash Mane GitHub",
@@ -44,8 +48,8 @@ export const metadata: Metadata = {
     "Zynth Browser",
     "DEV Tools Suite",
   ],
-  authors: [{ name: site.name, url: site.github }],
-  creator: site.name,
+  authors: [{ name: site.fullName, url: site.github }, { name: site.name, url: siteUrl }],
+  creator: site.fullName,
   publisher: site.name,
   alternates: {
     canonical: siteUrl,
@@ -58,25 +62,25 @@ export const metadata: Metadata = {
     gender: "male",
     locale: "en_IN",
     url: siteUrl,
-    title: "Shreyash Mane | AI and Full-Stack Developer Portfolio",
+    title: "Shreyash Mane | Shreyash Santosh Mane — Developer Portfolio",
     description:
-      "Official portfolio of Shreyash Mane — Computer Science & Engineering student, AI and Full-Stack Developer building intelligent systems, developer tools, and IoT solutions.",
+      "Official portfolio of Shreyash Santosh Mane (Shreyash Mane), CSE student building AI, Full-Stack, developer tools and IoT hardware systems in Kolhapur.",
     siteName: "Shreyash Mane Portfolio",
     images: [
       {
-        url: "/og.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Shreyash Mane - AI and Full-Stack Developer Portfolio",
+        alt: "Shreyash Santosh Mane (Shreyash Mane) - AI and Full-Stack Developer Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shreyash Mane | AI and Full-Stack Developer Portfolio",
+    title: "Shreyash Mane | Shreyash Santosh Mane — Developer Portfolio",
     description:
-      "Official portfolio of Shreyash Mane — Computer Science & Engineering student, AI and Full-Stack Developer building intelligent systems, developer tools, and IoT solutions.",
-    images: ["/og.png"],
+      "Official portfolio of Shreyash Santosh Mane (Shreyash Mane), CSE student building AI, Full-Stack, developer tools and IoT hardware systems in Kolhapur.",
+    images: ["/opengraph-image"],
   },
   icons: {
     icon: "/favicon.ico",
@@ -129,9 +133,12 @@ const rootSchema = {
       "@type": "Person",
       "@id": `${siteUrl}/#person`,
       name: site.name,
-      alternateName: ["Shreyash", "shreyashmane-dev", "Shreyash Mane Developer"],
+      givenName: "Shreyash",
+      additionalName: "Santosh",
+      familyName: "Mane",
+      alternateName: ["Shreyash Santosh Mane", "Shreyash", "shreyashmane-dev", "Shreyash Mane Developer"],
       url: siteUrl,
-      image: `${siteUrl}/og.png`,
+      image: `${siteUrl}/opengraph-image`,
       jobTitle: "Computer Science & Engineering Student | AI and Full-Stack Developer",
       email: `mailto:${site.email}`,
       telephone: "",

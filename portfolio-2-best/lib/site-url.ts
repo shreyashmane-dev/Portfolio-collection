@@ -25,8 +25,8 @@ export function getSiteUrl(): string {
     return cleanUrl(`https://${process.env.VERCEL_URL}`);
   }
 
-  // 4. Default production portfolio domain
-  return "https://shreyash-portfolio.vercel.app";
+  // 4. Default production portfolio domain (verified live deployment)
+  return "https://shreyash-portfolllio.vercel.app";
 }
 
 function cleanUrl(url: string): string {

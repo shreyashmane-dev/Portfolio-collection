@@ -113,9 +113,9 @@ export function Hero() {
 
         <h1
           className="hero-name font-display leading-[0.86]"
-          aria-label="Shreyash Mane — Computer Science and Engineering Student, AI and Full-Stack Developer"
+          aria-label="Shreyash Mane (Shreyash Santosh Mane) — Computer Science and Engineering Student, AI and Full-Stack Developer"
         >
-          <span className="sr-only">Shreyash Mane — Computer Science and Engineering Student, AI and Full-Stack Developer</span>
+          <span className="sr-only">Shreyash Mane (Shreyash Santosh Mane) — Computer Science and Engineering Student, AI and Full-Stack Developer</span>
           <span className="block overflow-hidden text-[clamp(4rem,15.5vw,15rem)]">
             <SplitChars text="SHREYASH" />
           </span>

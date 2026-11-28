@@ -56,7 +56,7 @@ export function About() {
       <div className="halftone pointer-events-none absolute right-0 top-0 h-1/2 w-1/3 opacity-40" aria-hidden="true" />
       <div className="mx-auto grid h-full max-w-[110rem] grid-cols-1 content-center gap-10 px-5 py-24 md:grid-cols-[1fr_1.6fr] md:gap-16 md:px-10">
         <div className="relative">
-          <p className="label mb-4 text-red">01 / About</p>
+          <p className="label mb-4 text-red">01 / About — {site.fullName}</p>
           <h2 className="font-display text-5xl uppercase leading-[0.9] md:text-7xl">
             Builder
             <br />
