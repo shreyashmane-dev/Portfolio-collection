@@ -1,6 +1,6 @@
 # Technical SEO Engineering & Performance Audit Report
 
-**Target Domain:** `https://shreyash-portfolllio.vercel.app` (or custom domain `https://shreyashmane.dev`)  
+**Target Domain:** `https://shreyash-portfolio.vercel.app` (or custom domain `https://shreyashmane.dev`)  
 **Subject:** Shreyash Mane — AI and Full-Stack Developer Portfolio  
 **Target Search Queries:**  
 - **Primary:** `"Shreyash Mane"`, `"Shreyash Mane portfolio"`, `"Shreyash Mane developer"`, `"Shreyash Mane CSE student"`, `"Shreyash Mane AI developer"`  
@@ -93,7 +93,7 @@ The document follows a strict, unbroken heading level hierarchy with zero skippe
 ## 4. Next.js Metadata API & Verification
 
 ### Root Layout Metadata (`app/layout.tsx`):
-- `metadataBase`: Configured to `process.env.NEXT_PUBLIC_SITE_URL` (fallback `https://shreyash-portfolllio.vercel.app`).
+- `metadataBase`: Configured to `process.env.NEXT_PUBLIC_SITE_URL` (fallback `https://shreyash-portfolio.vercel.app`).
 - `title`: `{ default: "Shreyash Mane | AI and Full-Stack Developer Portfolio", template: "%s | Shreyash Mane" }`
 - `description`: 155 characters (ideal 140–160 char window):
   *"Shreyash Mane is a Computer Science and Engineering student building practical AI, full-stack web applications, developer tools, and IoT hardware systems."*
@@ -132,18 +132,18 @@ Server-rendered in `<head>` on initial page load:
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://shreyash-portfolllio.vercel.app/#website",
-      "url": "https://shreyash-portfolllio.vercel.app",
+      "@id": "https://shreyash-portfolio.vercel.app/#website",
+      "url": "https://shreyash-portfolio.vercel.app",
       "name": "Shreyash Mane Portfolio",
       "description": "Portfolio of Shreyash Mane, Computer Science and Engineering student building practical AI, full-stack web applications, developer tools, and IoT hardware systems.",
       "inLanguage": "en-IN",
-      "publisher": { "@id": "https://shreyash-portfolllio.vercel.app/#person" }
+      "publisher": { "@id": "https://shreyash-portfolio.vercel.app/#person" }
     },
     {
       "@type": "Person",
-      "@id": "https://shreyash-portfolllio.vercel.app/#person",
+      "@id": "https://shreyash-portfolio.vercel.app/#person",
       "name": "Shreyash Mane",
-      "url": "https://shreyash-portfolllio.vercel.app",
+      "url": "https://shreyash-portfolio.vercel.app",
       "jobTitle": "Computer Science and Engineering Student & Developer",
       "email": "mailto:shreyashmane649@gmail.com",
       "address": {
@@ -172,19 +172,19 @@ Server-rendered in `<head>` on initial page load:
     },
     {
       "@type": "ProfilePage",
-      "@id": "https://shreyash-portfolllio.vercel.app/#profilepage",
-      "url": "https://shreyash-portfolllio.vercel.app",
+      "@id": "https://shreyash-portfolio.vercel.app/#profilepage",
+      "url": "https://shreyash-portfolio.vercel.app",
       "name": "Shreyash Mane | AI and Full-Stack Developer Portfolio",
-      "isPartOf": { "@id": "https://shreyash-portfolllio.vercel.app/#website" },
-      "mainEntity": { "@id": "https://shreyash-portfolllio.vercel.app/#person" }
+      "isPartOf": { "@id": "https://shreyash-portfolio.vercel.app/#website" },
+      "mainEntity": { "@id": "https://shreyash-portfolio.vercel.app/#person" }
     },
     {
       "@type": "ItemList",
-      "@id": "https://shreyash-portfolllio.vercel.app/#itemlist",
+      "@id": "https://shreyash-portfolio.vercel.app/#itemlist",
       "name": "Featured Engineering Projects by Shreyash Mane",
       "description": "Selected software, AI, and hardware projects built by Shreyash Mane.",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "OmSearch", "url": "https://shreyash-portfolllio.vercel.app/projects/omsearch" },
+        { "@type": "ListItem", "position": 1, "name": "OmSearch", "url": "https://shreyash-portfolio.vercel.app/projects/omsearch" },
         ...
       ]
     }
@@ -236,27 +236,27 @@ Once deployed to production on Vercel:
 
 1. **Verify Google Search Console Ownership:**
    - Navigate to [Google Search Console](https://search.google.com/search-console).
-   - Add property: `https://shreyash-portfolllio.vercel.app` (or custom domain `https://shreyashmane.dev`).
+   - Add property: `https://shreyash-portfolio.vercel.app` (or custom domain `https://shreyashmane.dev`).
    - Verification will succeed instantly via the uploaded HTML verification file (`/google6ba000893a0dc8c1.html`) or the embedded `<meta name="google-site-verification">` tag.
 2. **Submit Sitemap:**
    - In Search Console, go to **Sitemaps** > Enter `sitemap.xml` > Click **Submit**.
    - Confirm status shows *Success* with 25 indexable URLs indexed.
 3. **Request URL Inspection & Fast Indexing:**
-   - Use the Search Console URL Inspection tool for `https://shreyash-portfolllio.vercel.app/`.
+   - Use the Search Console URL Inspection tool for `https://shreyash-portfolio.vercel.app/`.
    - Click **Test Live URL**, verify screenshot renders the Hero and full text, then click **Request Indexing**.
    - Inspect key project URLs: `/projects/omsearch`, `/projects/drishti-ai`, `/projects/nexyris`.
 4. **Sync GitHub Profile README & Bio:**
-   - Ensure `https://github.com/shreyashmane-dev` profile website link points to `https://shreyash-portfolllio.vercel.app` (or `https://shreyashmane.dev`).
+   - Ensure `https://github.com/shreyashmane-dev` profile website link points to `https://shreyash-portfolio.vercel.app` (or `https://shreyashmane.dev`).
    - This cements the two-way authority bridge between your GitHub and your portfolio.
 5. **Sync LinkedIn Profile Contact & Featured Link:**
    - On your LinkedIn profile (`shreyashmane-7675a4385`), add your portfolio URL in **Contact Info** and in the **Featured** link section.
 6. **Set Production Environment Variable:**
    - In Vercel Project Settings > Environment Variables:
-     - Set `NEXT_PUBLIC_SITE_URL` = `https://shreyash-portfolllio.vercel.app` (or your custom domain once connected).
+     - Set `NEXT_PUBLIC_SITE_URL` = `https://shreyash-portfolio.vercel.app` (or your custom domain once connected).
 7. **Perform Live Curl Test:**
    - Run in any terminal:
      ```bash
-     curl -s https://shreyash-portfolllio.vercel.app | grep -i "OmSearch"
+     curl -s https://shreyash-portfolio.vercel.app | grep -i "OmSearch"
      ```
    - Verify that project titles and descriptions appear in the raw response.
 8. **Check OpenGraph Previews:**

@@ -1,0 +1,41 @@
+# Shreyash Mane — Developer Profile & Portfolio
+> Computer Science and Engineering Student | AI & Full-Stack Developer | Creative Technologist
+
+- Name: Shreyash Mane
+- GitHub: https://github.com/shreyashmane-dev
+- LinkedIn: https://www.linkedin.com/in/shreyashmane-7675a4385
+- Email: shreyashmane649@gmail.com
+- Institution: D.Y. Patil College of Engineering, Kolhapur
+- Affiliation: Shivaji University, Kolhapur
+- Location: Maharashtra, India
+- Portfolio: https://shreyash-portfolio.vercel.app
+
+## Core Focus Areas
+- Artificial Intelligence & Machine Learning (Agentic AI, LLM fine-tuning, RAG pipelines, Local LLMs)
+- Full-Stack Software Engineering (React, Next.js, Node.js, FastAPI, PostgreSQL, MongoDB, TypeScript)
+- Developer Tools & Systems (SAST vulnerability scanners, local search engines, desktop environments)
+- Hardware & IoT Engineering (ESP32, Arduino, RFID attendance, ultrasonic sensor monitoring)
+
+## Flagship Open-Source Projects
+1. OmSearch: Neural semantic web search engine & real-time knowledge retrieval pipeline.
+   Repo: https://github.com/shreyashmane-dev/OmSearch
+2. Nexyris Local: Sovereign offline-first AI studio with zero-telemetry local inference.
+   Repo: https://github.com/shreyashmane-dev/Nexyris
+3. SecureCode AI: Autonomous AST-aware code vulnerability detection and remediation engine.
+   Repo: https://github.com/shreyashmane-dev/Secure-codeb-AI
+4. Drishti AI: Intelligent assistive vision system for visual clarity and accessibility.
+   Repo: https://github.com/shreyashmane-dev/Drishti-AI
+5. KisanDirect: Direct agricultural marketplace empowering farmers with price transparency.
+   Repo: https://github.com/shreyashmane-dev/krushi-direct
+6. Zynth Browser: High-performance distraction-free web browser with native privacy protection.
+   Repo: https://github.com/shreyashmane-dev/zynth-browser
+7. DEV Tools Suite (AnoS): Comprehensive offline developer utility operating system.
+   Repo: https://github.com/shreyashmane-dev/dev-tools-suite
+8. Smart Classroom Attendance System: Automated IoT biometric RFID attendance pipeline.
+   Repo: https://github.com/shreyashmane-dev/Anything
+9. First Aid Hospital: Emergency medical service coordinator and triage assistance portal.
+   Repo: https://github.com/shreyashmane-dev/First-Aid
+10. Lumora: Interactive spatial 3D audio-visual web experience.
+    Repo: https://github.com/shreyashmane-dev/Lumora
+
+For complete details on all 43 repositories and hardware designs, visit https://shreyash-portfolio.vercel.app/#archive.

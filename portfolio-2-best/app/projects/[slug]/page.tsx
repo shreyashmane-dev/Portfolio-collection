@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Github, ArrowLeft, ArrowRight, ArrowUpRight, FolderGit2, Calendar, ShieldAlert } from "lucide-react";
+import { Github, ArrowLeft, ArrowRight, ArrowUpRight, ShieldAlert, Code2, UserCheck, Sparkles } from "lucide-react";
 import { projects, getProject } from "@/lib/projects";
 import { site } from "@/lib/site";
+import { getSiteUrl } from "@/lib/site-url";
 import { KeyVisual } from "@/components/KeyVisual";
 import { StatusTag, DocBadge } from "@/components/StatusTag";
 import { TechIcon } from "@/components/TechIcon";
 import { pad2 } from "@/lib/utils";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://shreyash-portfolllio.vercel.app";
+const siteUrl = getSiteUrl();
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -21,26 +22,37 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!project) return { title: "Project Not Found" };
 
   const canonicalUrl = `${siteUrl}/projects/${project.slug}`;
-  const title = `${project.name} — ${project.tagline}`;
-  const description = `${project.name}: ${project.description} Engineered with ${project.tech.slice(0, 4).join(", ")}. Part of Shreyash Mane's portfolio.`;
+  const title = `${project.name} | Shreyash Mane — ${project.tagline}`;
+  const description = `${project.name} is an open-source software project engineered by Shreyash Mane. ${project.description} Tech stack: ${project.tech.slice(0, 5).join(", ")}. Part of Shreyash Mane's portfolio.`;
 
   return {
-    title: project.name,
+    title,
     description: description.slice(0, 160),
+    keywords: [
+      project.name,
+      `${project.name} Shreyash Mane`,
+      `${project.name} GitHub`,
+      "Shreyash Mane",
+      "Shreyash Mane portfolio",
+      "Shreyash Mane projects",
+      ...project.tech,
+      ...project.labels,
+    ],
     alternates: {
       canonical: canonicalUrl,
     },
     openGraph: {
       type: "article",
-      title: `${project.name} | Shreyash Mane`,
+      title: `${project.name} by Shreyash Mane`,
       description: description.slice(0, 160),
       url: canonicalUrl,
+      siteName: "Shreyash Mane Portfolio",
       images: [
         {
           url: `/projects/${project.slug}/opengraph-image`,
           width: 1200,
           height: 630,
-          alt: `${project.name} — Key Visual & Architecture`,
+          alt: `${project.name} — Architecture & Details by Shreyash Mane`,
         },
       ],
     },
@@ -50,22 +62,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: description.slice(0, 160),
       images: [`/projects/${project.slug}/opengraph-image`],
     },
-    robots: project.docNeeded
-      ? {
-          index: false,
-          follow: true,
-        }
-      : {
-          index: true,
-          follow: true,
-          googleBot: {
-            index: true,
-            follow: true,
-            "max-video-preview": -1,
-            "max-image-preview": "large",
-            "max-snippet": -1,
-          },
-        },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
   };
 }
 
@@ -78,21 +85,39 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   const prev = projects[idx - 1];
   const next = projects[idx + 1];
 
+  // Related projects by matching technology or label
+  const relatedProjects = projects
+    .filter(
+      (p) =>
+        p.slug !== project.slug &&
+        (p.labels.some((l) => project.labels.includes(l)) ||
+          p.tech.some((t) => project.tech.includes(t)))
+    )
+    .slice(0, 3);
+
   const softwareJsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareSourceCode",
     name: project.name,
-    headline: project.tagline,
+    headline: `${project.name} — ${project.tagline}`,
     description: project.description,
     codeRepository: project.repo,
+    url: `${siteUrl}/projects/${project.slug}`,
     author: {
       "@type": "Person",
       name: site.name,
       url: siteUrl,
       sameAs: [site.github, site.linkedin],
+      jobTitle: "Computer Science & Engineering Student | Developer",
+      alumniOf: site.college,
+    },
+    maintainer: {
+      "@type": "Person",
+      name: site.name,
+      url: siteUrl,
     },
     programmingLanguage: project.tech,
-    url: `${siteUrl}/projects/${project.slug}`,
+    keywords: [project.name, ...project.tech, ...project.labels].join(", "),
   };
 
   const breadcrumbJsonLd = {
@@ -174,7 +199,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 <div>
                   <p className="font-semibold text-red">Documentation Under Active Development</p>
                   <p className="mt-1 text-xs text-muted leading-relaxed">
-                    This repository has limited documentation. In keeping with our strict portfolio verification rules, claims are restricted to verified repository metadata and code structure.
+                    This repository is under active development. Project architecture and codebase are actively maintained by Shreyash Mane on GitHub.
                   </p>
                 </div>
               </div>
@@ -186,9 +211,50 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               </p>
             )}
 
+            {/* Developer Authorship Card */}
+            <div className="mt-8 border border-line bg-surface/50 p-5">
+              <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-blue">
+                <UserCheck size={14} aria-hidden="true" />
+                <span>Developer &amp; Authorship</span>
+              </div>
+              <div className="mt-2 text-sm text-ink font-medium">
+                Engineered by <span className="text-blue font-bold">{site.name}</span>
+              </div>
+              <p className="mt-1 text-xs text-muted leading-relaxed">
+                Computer Science &amp; Engineering Student at {site.college} ({site.university}).
+                Specializing in AI systems, full-stack web applications, and developer tools.
+              </p>
+              <div className="mt-3 flex items-center gap-3 font-mono text-xs">
+                <a
+                  href={site.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted transition-colors hover:text-blue flex items-center gap-1"
+                >
+                  <Github size={12} aria-hidden="true" /> GitHub Profile
+                </a>
+                <span className="text-line">|</span>
+                <a
+                  href={site.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted transition-colors hover:text-blue"
+                >
+                  LinkedIn
+                </a>
+                <span className="text-line">|</span>
+                <a href={`mailto:${site.email}`} className="text-muted transition-colors hover:text-blue">
+                  Contact
+                </a>
+              </div>
+            </div>
+
             {/* Technologies */}
             <div className="mt-8">
-              <h2 className="label mb-3">Technologies &amp; Architecture</h2>
+              <h2 className="label mb-3 flex items-center gap-2">
+                <Code2 size={13} aria-hidden="true" />
+                <span>Technologies &amp; Architecture</span>
+              </h2>
               <div className="flex flex-wrap gap-2">
                 {project.tech.length > 0 ? (
                   project.tech.map((t) => (
@@ -234,6 +300,33 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               <KeyVisual project={project} className="block w-full text-ink" />
             </div>
             <p className="label mt-3 text-right">Procedural Key Visual Representation</p>
+
+            {/* Related Projects by Shreyash Mane */}
+            {relatedProjects.length > 0 && (
+              <div className="mt-10 border-t border-line pt-6">
+                <h3 className="label mb-3 flex items-center gap-1.5 text-ink">
+                  <Sparkles size={12} className="text-blue" aria-hidden="true" />
+                  <span>More Projects by Shreyash Mane</span>
+                </h3>
+                <div className="space-y-2">
+                  {relatedProjects.map((rp) => (
+                    <Link
+                      key={rp.slug}
+                      href={`/projects/${rp.slug}`}
+                      className="group flex items-center justify-between border border-line p-3 transition-colors hover:border-blue/50 hover:bg-surface/60"
+                    >
+                      <div className="min-w-0 flex-1">
+                        <div className="font-display text-sm uppercase text-ink group-hover:text-blue transition-colors truncate">
+                          {rp.name}
+                        </div>
+                        <div className="text-xs text-muted truncate">{rp.tagline}</div>
+                      </div>
+                      <ArrowUpRight size={14} className="text-muted group-hover:text-blue transition-colors shrink-0 ml-2" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
 

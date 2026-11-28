@@ -2,7 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Anton, Space_Grotesk, JetBrains_Mono, Zen_Antique } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
-import { featuredProjects } from "@/lib/projects";
+import { projects } from "@/lib/projects";
+import { getSiteUrl } from "@/lib/site-url";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { CustomCursor } from "@/components/CustomCursor";
@@ -13,7 +14,7 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono", display: "swap" });
 const zenAntique = Zen_Antique({ weight: "400", subsets: ["latin"], variable: "--font-zen", display: "swap", preload: false });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://shreyash-portfolllio.vercel.app";
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -22,21 +23,45 @@ export const metadata: Metadata = {
     template: "%s | Shreyash Mane",
   },
   description:
-    "Shreyash Mane is a Computer Science and Engineering student building practical AI, full-stack web applications, developer tools, and IoT hardware systems.",
+    "Official portfolio of Shreyash Mane — Computer Science & Engineering student, AI and Full-Stack Developer building intelligent systems, developer tools, and IoT solutions.",
+  keywords: [
+    "Shreyash Mane",
+    "Shreyash Mane portfolio",
+    "Shreyash Mane developer",
+    "Shreyash Mane GitHub",
+    "Shreyash Mane LinkedIn",
+    "Shreyash Mane CSE student",
+    "Shreyash Mane Kolhapur",
+    "Shreyash Mane D.Y. Patil College of Engineering",
+    "shreyashmane-dev",
+    "AI developer portfolio",
+    "Full-Stack developer India",
+    "OmSearch",
+    "Drishti AI",
+    "Nexyris",
+    "SecureCode AI",
+    "KisanDirect",
+    "Zynth Browser",
+    "DEV Tools Suite",
+  ],
   authors: [{ name: site.name, url: site.github }],
   creator: site.name,
   publisher: site.name,
   alternates: {
-    canonical: "./",
+    canonical: siteUrl,
   },
   openGraph: {
-    type: "website",
+    type: "profile",
+    firstName: "Shreyash",
+    lastName: "Mane",
+    username: "shreyashmane-dev",
+    gender: "male",
     locale: "en_IN",
-    url: "./",
+    url: siteUrl,
     title: "Shreyash Mane | AI and Full-Stack Developer Portfolio",
     description:
-      "Shreyash Mane is a Computer Science and Engineering student building practical AI, full-stack web applications, developer tools, and IoT hardware systems.",
-    siteName: "Shreyash Mane",
+      "Official portfolio of Shreyash Mane — Computer Science & Engineering student, AI and Full-Stack Developer building intelligent systems, developer tools, and IoT solutions.",
+    siteName: "Shreyash Mane Portfolio",
     images: [
       {
         url: "/og.png",
@@ -50,7 +75,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Shreyash Mane | AI and Full-Stack Developer Portfolio",
     description:
-      "Shreyash Mane is a Computer Science and Engineering student building practical AI, full-stack web applications, developer tools, and IoT hardware systems.",
+      "Official portfolio of Shreyash Mane — Computer Science & Engineering student, AI and Full-Stack Developer building intelligent systems, developer tools, and IoT solutions.",
     images: ["/og.png"],
   },
   icons: {
@@ -92,34 +117,54 @@ const rootSchema = {
       "@type": "WebSite",
       "@id": `${siteUrl}/#website`,
       url: siteUrl,
-      name: "Shreyash Mane Portfolio",
+      name: "Shreyash Mane — Developer Portfolio",
+      alternateName: "Shreyash Mane Portfolio",
       description:
-        "Portfolio of Shreyash Mane, Computer Science and Engineering student building practical AI, full-stack web applications, developer tools, and IoT hardware systems.",
+        "Official portfolio of Shreyash Mane, Computer Science and Engineering student building practical AI, full-stack web applications, developer tools, and IoT hardware systems.",
       inLanguage: "en-IN",
       publisher: { "@id": `${siteUrl}/#person` },
+      author: { "@id": `${siteUrl}/#person` },
     },
     {
       "@type": "Person",
       "@id": `${siteUrl}/#person`,
       name: site.name,
+      alternateName: ["Shreyash", "shreyashmane-dev", "Shreyash Mane Developer"],
       url: siteUrl,
-      jobTitle: "Computer Science and Engineering Student & Developer",
+      image: `${siteUrl}/og.png`,
+      jobTitle: "Computer Science & Engineering Student | AI and Full-Stack Developer",
       email: `mailto:${site.email}`,
+      telephone: "",
       address: {
         "@type": "PostalAddress",
+        addressLocality: "Kolhapur",
         addressRegion: "Maharashtra",
         addressCountry: "IN",
       },
       alumniOf: {
         "@type": "CollegeOrUniversity",
         name: site.college,
+        sameAs: "https://coek.dypgroup.edu.in",
       },
       affiliation: {
         "@type": "CollegeOrUniversity",
         name: site.university,
+        sameAs: "https://www.unishivaji.ac.in",
       },
-      sameAs: [site.github, site.linkedin],
+      sameAs: [
+        site.github,
+        site.linkedin,
+        "https://github.com/shreyashmane-dev/OmSearch",
+        "https://github.com/shreyashmane-dev/Nexyris",
+        "https://github.com/shreyashmane-dev/Drishti-AI",
+        "https://github.com/shreyashmane-dev/Secure-codeb-AI",
+        "https://github.com/shreyashmane-dev/krushi-direct",
+        "https://github.com/shreyashmane-dev/zynth-browser",
+      ],
       knowsAbout: [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Full-Stack Development",
         "Python",
         "TypeScript",
         "JavaScript",
@@ -140,9 +185,9 @@ const rootSchema = {
         "XGBoost",
         "ESP32",
         "Arduino",
-        "Internet of Things",
-        "Artificial Intelligence",
-        "Full-Stack Development",
+        "Internet of Things (IoT)",
+        "Cybersecurity",
+        "Software Engineering",
       ],
     },
     {
@@ -152,13 +197,25 @@ const rootSchema = {
       name: "Shreyash Mane | AI and Full-Stack Developer Portfolio",
       isPartOf: { "@id": `${siteUrl}/#website` },
       mainEntity: { "@id": `${siteUrl}/#person` },
+      breadcrumb: {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: siteUrl,
+          },
+        ],
+      },
     },
     {
       "@type": "ItemList",
       "@id": `${siteUrl}/#itemlist`,
-      name: "Featured Engineering Projects by Shreyash Mane",
-      description: "Selected software, AI, and hardware projects built by Shreyash Mane.",
-      itemListElement: featuredProjects.map((p, index) => ({
+      name: "Software, AI, and Hardware Projects by Shreyash Mane",
+      description: "Complete catalog of engineering projects and open-source software authored by Shreyash Mane.",
+      numberOfItems: projects.length,
+      itemListElement: projects.map((p, index) => ({
         "@type": "ListItem",
         position: index + 1,
         name: p.name,

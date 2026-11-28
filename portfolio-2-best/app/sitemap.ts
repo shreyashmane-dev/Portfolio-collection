@@ -1,30 +1,29 @@
 import type { MetadataRoute } from "next";
 import { projects } from "@/lib/projects";
-
-const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://shreyash-portfolllio.vercel.app";
+import { getSiteUrl } from "@/lib/site-url";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Exclude thin / docNeeded projects from sitemap to prevent low-quality indexing penalties
-  const indexableProjects = projects.filter((p) => !p.docNeeded);
+  const base = getSiteUrl();
+  const now = new Date();
 
   return [
     {
       url: base,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
+      lastModified: now,
+      changeFrequency: "daily",
       priority: 1.0,
     },
     {
       url: `${base}/credits`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.3,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.5,
     },
-    ...indexableProjects.map((p) => ({
+    ...projects.map((p) => ({
       url: `${base}/projects/${p.slug}`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: p.featured ? 0.8 : 0.6,
+      lastModified: now,
+      changeFrequency: p.featured ? ("weekly" as const) : ("monthly" as const),
+      priority: p.featured ? 0.9 : 0.75,
     })),
   ];
 }

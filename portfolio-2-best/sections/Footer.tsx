@@ -17,6 +17,22 @@ export function Footer() {
       <div className="mx-auto flex max-w-[110rem] flex-wrap items-center justify-between gap-4 px-5 md:px-10">
         <p className="label">© 2026 {site.name} — Kolhapur, India</p>
         <div className="flex items-center gap-6">
+          <a
+            href={site.github}
+            target="_blank"
+            rel="noopener noreferrer me"
+            className="label transition-colors hover:text-blue"
+          >
+            GitHub
+          </a>
+          <a
+            href={site.linkedin}
+            target="_blank"
+            rel="noopener noreferrer me"
+            className="label transition-colors hover:text-blue"
+          >
+            LinkedIn
+          </a>
           <Link href="/credits" className="label transition-colors hover:text-blue">
             Credits
           </Link>

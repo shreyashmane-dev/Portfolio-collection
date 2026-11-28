@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
-
-const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://shreyash-portfolllio.vercel.app";
+import { getSiteUrl } from "@/lib/site-url";
 
 export default function robots(): MetadataRoute.Robots {
+  const base = getSiteUrl();
+
   return {
     rules: [
       {
@@ -10,7 +11,23 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/api/"],
       },
+      {
+        userAgent: [
+          "Googlebot",
+          "Bingbot",
+          "Applebot",
+          "DuckDuckBot",
+          "YandexBot",
+          "Baiduspider",
+          "GPTBot",
+          "PerplexityBot",
+          "ClaudeBot",
+          "CCBot",
+        ],
+        allow: "/",
+      },
     ],
     sitemap: `${base}/sitemap.xml`,
+    host: base,
   };
 }
